@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador - AgendAI</title>
+    <link rel="stylesheet" href="admin-panel-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Painel do Administrador</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="active">Home</a></li>
+                <li><a href="#">Atendentes</a></li>
+                <li><a href="#">Usuários</a></li>
+                <li><a href="#">Agendamentos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="admin-container">
+        <section class="pending-attendants">
+            <h2>Atendentes Pendentes</h2>
+            
+            <div class="filter-container">
+                <div class="filter-group">
+                    <select id="area-filter">
+                        <option value="" disabled selected>Área de Atuação</option>
+                        <option value="saude">Saúde</option>
+                        <option value="juridico">Jurídico</option>
+                        <option value="carreira">Carreira</option>
+                        <option value="contabil">Contábil</option>
+                        <option value="assistencia-social">Assistência Social</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <select id="status-filter">
+                        <option value="" disabled selected>Status</option>
+                        <option value="pendente">Pendente</option>
+                        <option value="aprovado">Aprovado</option>
+                        <option value="reprovado">Reprovado</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group search-group">
+                    <input type="text" id="search-input" placeholder="Busca por nome e email">
+                </div>
+                
+                <button id="update-list" class="update-button">Atualizar Lista</button>
+            </div>
+            
+            <div class="table-container">
+                <table class="attendants-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Documento</th>
+                            <th>Raio de atend.</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendants-list">
+                        <tr>
+                            <td>Rafael Chaves</td>
+                            <td>rafael@gmail.com</td>
+                            <td>CRP12345</td>
+                            <td>10 KM</td>
+                            <td class="actions-cell">
+                                <button class="approve-button">Aprovar</button>
+                                <button class="reject-button">Reprovar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Maria Silva</td>
+                            <td>maria@gmail.com</td>
+                            <td>CRP67890</td>
+                            <td>15 KM</td>
+                            <td class="actions-cell">
+                                <button class="approve-button">Aprovar</button>
+                                <button class="reject-button">Reprovar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>João Santos</td>
+                            <td>joao@gmail.com</td>
+                            <td>CRP54321</td>
+                            <td>20 KM</td>
+                            <td class="actions-cell">
+                                <button class="approve-button">Aprovar</button>
+                                <button class="reject-button">Reprovar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ana Oliveira</td>
+                            <td>ana@gmail.com</td>
+                            <td>CRP98765</td>
+                            <td>5 KM</td>
+                            <td class="actions-cell">
+                                <button class="approve-button">Aprovar</button>
+                                <button class="reject-button">Reprovar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin-panel-script.js"></script>
+</body>
+</html>

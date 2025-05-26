@@ -1,116 +1,73 @@
-// Aguarda o carregamento completo do DOM
-document.addEventListener('DOMContentLoaded', function() {
-    // Seleção de elementos
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const loginForm = document.getElementById('login-form');
-    
-    // Variável para armazenar o tipo de usuário selecionado
-    let tipoUsuarioSelecionado = 'usuario'; // Valor padrão
-    
-    // Funcionalidade para as abas de tipo de usuário
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove a classe active de todos os botões
-            tabButtons.forEach(btn => btn.classList.remove('active'));
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AgendAI</title>
+    <link rel="stylesheet" href="login-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="../logo_atendimento.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="../Slogan_atendimento.png" alt="Slogan">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../agendamento/agendamento.html">Agendamentos</a></li>
+                <li><a href="../planos/planos.html">Planos</a></li>
+                <li><a href="../quem-somos/quem-somos.html">Quem somos</a></li>
+                <li><a href="../contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="login-button-container">
+            <a href="../login/login.html" class="login-button">
+                <i class="fas fa-user-circle"></i>
+                Fazer login
+            </a>
+        </div>
+    </header>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
             
-            // Adiciona a classe active ao botão clicado
-            this.classList.add('active');
+            <!-- Tabs - Ajustado para corresponder aos tipos de usuário do banco de dados -->
+            <div class="login-tabs">
+                <button class="tab-button active" data-tab="usuario">Cliente</button>
+                <button class="tab-button" data-tab="atendente">Atendente</button>
+                <button class="tab-button" data-tab="admin">Admin</button>
+            </div>
             
-            // Obtém o tipo de usuário (usuario, atendente ou admin)
-            tipoUsuarioSelecionado = this.getAttribute('data-tab');
-            console.log(`Tipo de usuário selecionado: ${tipoUsuarioSelecionado}`);
-        });
-    });
-    
-    // Manipulação do formulário de login
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Obter os valores dos campos
-            const email = document.getElementById('email').value;
-            const senha = document.getElementById('senha').value;
-            
-            // Verificar se os campos estão preenchidos
-            if (!email || !senha) {
-                alert('Por favor, preencha todos os campos.');
-                return;
-            }
-            
-            // Criar objeto com os dados de login
-            const loginData = {
-                email: email,
-                senha: senha,
-                tipo_usuario: tipoUsuarioSelecionado
-            };
-            
-            console.log('Dados de login:', loginData);
-            
-            // Simulação de verificação de login
-            // Em um ambiente real, isso seria uma chamada de API para verificar as credenciais
-            let redirectUrl = '';
-            let mensagem = '';
-            
-            // Simulação de diferentes tipos de usuário e situações
-            if (tipoUsuarioSelecionado === 'usuario') {
-                // Verificar se é um usuário comum
-                if (email === 'usuario@example.com' && senha === 'senha123') {
-                    redirectUrl = '../index.html';
-                    mensagem = 'Login de usuário realizado com sucesso!';
-                }
-            } else if (tipoUsuarioSelecionado === 'atendente') {
-                // Verificar se é um atendente
-                if (email === 'atendente@example.com' && senha === 'senha123') {
-                    // Verificar se o atendente está aprovado
-                    const situacao = 'aprovado'; // Simulação - em um sistema real, viria do banco
-                    
-                    if (situacao === 'aprovado') {
-                        redirectUrl = '../atendente/dashboard.html';
-                        mensagem = 'Login de atendente realizado com sucesso!';
-                    } else if (situacao === 'pendente') {
-                        mensagem = 'Seu cadastro ainda está em análise. Por favor, aguarde a aprovação.';
-                    } else if (situacao === 'bloqueado') {
-                        mensagem = 'Seu cadastro foi bloqueado. Entre em contato com o suporte.';
-                    }
-                }
-            } else if (tipoUsuarioSelecionado === 'admin') {
-                // Verificar se é um administrador
-                if (email === 'admin@example.com' && senha === 'admin123') {
-                    redirectUrl = '../admin-panel/admin-panel.html';
-                    mensagem = 'Login de administrador realizado com sucesso!';
-                }
-            }
-            
-            if (redirectUrl) {
-                // Login bem-sucedido
-                alert(mensagem);
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
                 
-                // Redirecionar para a página apropriada
-                setTimeout(() => {
-                    window.location.href = redirectUrl;
-                }, 1000);
-            } else {
-                // Login falhou
-                alert('Email ou senha incorretos, ou tipo de usuário inválido.');
-            }
-        });
-    }
-    
-    // Link "Esqueci senha"
-    const forgotPasswordLink = document.querySelector('.forgot-password a');
-    if (forgotPasswordLink) {
-        forgotPasswordLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            
-            if (!email) {
-                alert('Por favor, informe seu email antes de solicitar a recuperação de senha.');
-                return;
-            }
-            
-            // Simulação de envio de email de recuperação
-            alert(`Um email de recuperação de senha foi enviado para ${email}. Por favor, verifique sua caixa de entrada.`);
-        });
-    }
-});
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                
+                <div class="forgot-password">
+                    <a href="#">Esqueci senha</a>
+                </div>
+                
+                <button type="submit" class="login-submit-button">Login</button>
+                
+                <div class="register-link">
+                    <a href="../cadastro/cadastro.html">Ainda não possuo conta!</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>

@@ -41,6 +41,7 @@
         <h2>Agende seu atendimento</h2>
         
         <div class="services-container">
+            <!-- Ajustando as categorias para corresponder à enumeração no banco de dados -->
             <div class="service-card" data-service="saude">
                 <div class="service-icon">
                     <i class="fas fa-heartbeat"></i>
@@ -55,13 +56,6 @@
                 <h3>Jurídico</h3>
             </div>
             
-            <div class="service-card" data-service="carreira">
-                <div class="service-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <h3>Carreira</h3>
-            </div>
-            
             <div class="service-card" data-service="contabil">
                 <div class="service-icon">
                     <i class="fas fa-calculator"></i>
@@ -69,7 +63,14 @@
                 <h3>Contábil</h3>
             </div>
             
-            <div class="service-card" data-service="assistencia-social">
+            <div class="service-card" data-service="outros">
+                <div class="service-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Carreira</h3>
+            </div>
+            
+            <div class="service-card" data-service="outros">
                 <div class="service-icon">
                     <i class="fas fa-hands-helping"></i>
                 </div>
@@ -96,6 +97,18 @@
         </div>
     </div>
 
+    <!-- Modal para seleção de serviço específico -->
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Selecione o serviço</h2>
+            
+            <div class="services-list" id="services-list">
+                <!-- Serviços serão adicionados dinamicamente via JavaScript -->
+            </div>
+        </div>
+    </div>
+
     <!-- Modal para seleção de data e hora -->
     <div id="datetime-modal" class="modal">
         <div class="modal-content">
@@ -104,6 +117,10 @@
             
             <div class="selected-professional" id="selected-professional-info">
                 <!-- Informações do profissional selecionado -->
+            </div>
+            
+            <div class="selected-service" id="selected-service-info">
+                <!-- Informações do serviço selecionado -->
             </div>
             
             <div class="calendar-container">

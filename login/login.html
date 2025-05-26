@@ -36,10 +36,11 @@
         <div class="login-box">
             <h2>Login</h2>
             
-            <!-- Tabs -->
+            <!-- Tabs - Ajustado para corresponder aos tipos de usuário do banco de dados -->
             <div class="login-tabs">
-                <button class="tab-button active" data-tab="cliente">Cliente</button>
+                <button class="tab-button active" data-tab="usuario">Cliente</button>
                 <button class="tab-button" data-tab="atendente">Atendente</button>
+                <button class="tab-button" data-tab="admin">Admin</button>
             </div>
             
             <!-- Login Form -->
@@ -50,8 +51,8 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" required>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
                 </div>
                 
                 <div class="forgot-password">

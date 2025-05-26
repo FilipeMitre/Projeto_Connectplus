@@ -1,32 +1,51 @@
 // Aguarda o carregamento completo do DOM
 document.addEventListener('DOMContentLoaded', function() {
-    // Dados de exemplo para profissionais
-    const profissionais = {
+    // Dados de exemplo para serviços (baseados na tabela servicos do banco de dados)
+    const servicos = {
         saude: [
-            { id: 1, nome: 'Dr. Rafael Chaves', especialidade: 'Psicólogo', avatar: 'RC', rating: 4.9 },
-            { id: 2, nome: 'Dra. Maria Silva', especialidade: 'Nutricionista', avatar: 'MS', rating: 4.7 },
-            { id: 3, nome: 'Dr. João Santos', especialidade: 'Fisioterapeuta', avatar: 'JS', rating: 4.8 }
+            { id: 1, nome: 'Consulta Médica', descricao: 'Consulta clínica geral', categoria: 'saude', duracao: 30 },
+            { id: 2, nome: 'Consulta Psicológica', descricao: 'Atendimento psicológico', categoria: 'saude', duracao: 45 },
+            { id: 3, nome: 'Fisioterapia', descricao: 'Sessão de fisioterapia', categoria: 'saude', duracao: 60 }
         ],
         juridico: [
-            { id: 4, nome: 'Dr. Carlos Mendes', especialidade: 'Advogado Civil', avatar: 'CM', rating: 4.6 },
-            { id: 5, nome: 'Dra. Ana Oliveira', especialidade: 'Advogada Trabalhista', avatar: 'AO', rating: 4.9 }
-        ],
-        carreira: [
-            { id: 6, nome: 'Paulo Ribeiro', especialidade: 'Coach de Carreira', avatar: 'PR', rating: 4.5 },
-            { id: 7, nome: 'Fernanda Lima', especialidade: 'Consultora RH', avatar: 'FL', rating: 4.8 }
+            { id: 4, nome: 'Consulta Jurídica Civil', descricao: 'Orientação em direito civil', categoria: 'juridico', duracao: 45 },
+            { id: 5, nome: 'Consulta Jurídica Trabalhista', descricao: 'Orientação em direito trabalhista', categoria: 'juridico', duracao: 45 }
         ],
         contabil: [
-            { id: 8, nome: 'Roberto Alves', especialidade: 'Contador', avatar: 'RA', rating: 4.7 },
-            { id: 9, nome: 'Juliana Costa', especialidade: 'Consultora Financeira', avatar: 'JC', rating: 4.6 }
+            { id: 6, nome: 'Consultoria Contábil', descricao: 'Orientação contábil geral', categoria: 'contabil', duracao: 30 },
+            { id: 7, nome: 'Planejamento Financeiro', descricao: 'Consultoria financeira', categoria: 'contabil', duracao: 60 }
         ],
-        'assistencia-social': [
-            { id: 10, nome: 'Mariana Souza', especialidade: 'Assistente Social', avatar: 'MS', rating: 4.9 },
-            { id: 11, nome: 'Pedro Gomes', especialidade: 'Psicólogo Social', avatar: 'PG', rating: 4.8 }
+        outros: [
+            { id: 8, nome: 'Coaching de Carreira', descricao: 'Orientação profissional', categoria: 'outros', duracao: 60 },
+            { id: 9, nome: 'Assistência Social', descricao: 'Suporte e orientação social', categoria: 'outros', duracao: 45 }
+        ]
+    };
+    
+    // Dados de exemplo para profissionais (baseados nas tabelas usuario, atendente e atendente_servico)
+    const profissionais = {
+        saude: [
+            { id: 1, nome: 'Dr. Rafael Chaves', especialidade: 'Psicólogo', avatar: 'RC', rating: 4.9, servicos: [2] },
+            { id: 2, nome: 'Dra. Maria Silva', especialidade: 'Nutricionista', avatar: 'MS', rating: 4.7, servicos: [1] },
+            { id: 3, nome: 'Dr. João Santos', especialidade: 'Fisioterapeuta', avatar: 'JS', rating: 4.8, servicos: [3] }
+        ],
+        juridico: [
+            { id: 4, nome: 'Dr. Carlos Mendes', especialidade: 'Advogado Civil', avatar: 'CM', rating: 4.6, servicos: [4] },
+            { id: 5, nome: 'Dra. Ana Oliveira', especialidade: 'Advogada Trabalhista', avatar: 'AO', rating: 4.9, servicos: [5] }
+        ],
+        contabil: [
+            { id: 8, nome: 'Roberto Alves', especialidade: 'Contador', avatar: 'RA', rating: 4.7, servicos: [6] },
+            { id: 9, nome: 'Juliana Costa', especialidade: 'Consultora Financeira', avatar: 'JC', rating: 4.6, servicos: [7] }
+        ],
+        outros: [
+            { id: 6, nome: 'Paulo Ribeiro', especialidade: 'Coach de Carreira', avatar: 'PR', rating: 4.5, servicos: [8] },
+            { id: 10, nome: 'Mariana Souza', especialidade: 'Assistente Social', avatar: 'MS', rating: 4.9, servicos: [9] }
         ]
     };
     
     // Variáveis para armazenar a seleção do usuário
     let selectedService = null;
+    let selectedServiceCategory = null;
+    let selectedServiceObject = null;
     let selectedProfessional = null;
     let selectedDate = null;
     let selectedTime = null;
@@ -34,12 +53,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Seleção de elementos
     const serviceCards = document.querySelectorAll('.service-card');
     const professionalModal = document.getElementById('professional-modal');
+    const serviceModal = document.getElementById('service-modal');
     const datetimeModal = document.getElementById('datetime-modal');
     const confirmationModal = document.getElementById('confirmation-modal');
     const closeButtons = document.querySelectorAll('.close-button');
     const professionalsList = document.getElementById('professionals-list');
+    const servicesList = document.getElementById('services-list');
     const searchProfessional = document.getElementById('search-professional');
     const selectedProfessionalInfo = document.getElementById('selected-professional-info');
+    const selectedServiceInfo = document.getElementById('selected-service-info');
     const calendarElement = document.getElementById('calendar');
     const currentMonthElement = document.getElementById('current-month');
     const prevMonthButton = document.getElementById('prev-month');
@@ -57,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners para os cards de serviço
     serviceCards.forEach(card => {
         card.addEventListener('click', function() {
-            selectedService = this.getAttribute('data-service');
-            openProfessionalModal(selectedService);
+            selectedServiceCategory = this.getAttribute('data-service');
+            openProfessionalModal(selectedServiceCategory);
         });
     });
     
@@ -117,32 +139,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Função para abrir o modal de seleção de profissional
-    function openProfessionalModal(service) {
+    function openProfessionalModal(serviceCategory) {
         // Limpa a busca
         if (searchProfessional) {
             searchProfessional.value = '';
         }
         
-        // Renderiza a lista de profissionais para o serviço selecionado
-        renderProfessionalsList(service);
+        // Renderiza a lista de profissionais para a categoria de serviço selecionada
+        renderProfessionalsList(serviceCategory);
         
         // Abre o modal
         professionalModal.style.display = 'block';
     }
     
+    // Função para abrir o modal de seleção de serviço
+    function openServiceModal(professional) {
+        // Renderiza a lista de serviços oferecidos pelo profissional
+        renderServicesList(professional);
+        
+        // Abre o modal
+        serviceModal.style.display = 'block';
+    }
+    
     // Função para renderizar a lista de profissionais
-    function renderProfessionalsList(service) {
+    function renderProfessionalsList(serviceCategory) {
         // Limpa a lista
         professionalsList.innerHTML = '';
         
-        // Verifica se há profissionais para o serviço selecionado
-        if (!profissionais[service] || profissionais[service].length === 0) {
+        // Verifica se há profissionais para a categoria de serviço selecionada
+        if (!profissionais[serviceCategory] || profissionais[serviceCategory].length === 0) {
             professionalsList.innerHTML = '<p class="no-results">Nenhum profissional encontrado para este serviço.</p>';
             return;
         }
         
         // Adiciona cada profissional à lista
-        profissionais[service].forEach(professional => {
+        profissionais[serviceCategory].forEach(professional => {
             const card = document.createElement('div');
             card.className = 'professional-card';
             card.setAttribute('data-id', professional.id);
@@ -159,10 +190,74 @@ document.addEventListener('DOMContentLoaded', function() {
             card.addEventListener('click', function() {
                 selectedProfessional = professional;
                 closeModal(professionalModal);
-                openDatetimeModal();
+                
+                // Se o profissional oferece apenas um serviço, selecioná-lo automaticamente
+                if (professional.servicos.length === 1) {
+                    const servicoId = professional.servicos[0];
+                    // Encontrar o objeto de serviço correspondente
+                    for (const categoria in servicos) {
+                        const servicoEncontrado = servicos[categoria].find(s => s.id === servicoId);
+                        if (servicoEncontrado) {
+                            selectedServiceObject = servicoEncontrado;
+                            break;
+                        }
+                    }
+                    openDatetimeModal();
+                } else {
+                    // Se oferece múltiplos serviços, abrir modal de seleção de serviço
+                    openServiceModal(professional);
+                }
             });
             
             professionalsList.appendChild(card);
+        });
+    }
+    
+    // Função para renderizar a lista de serviços
+    function renderServicesList(professional) {
+        // Limpa a lista
+        servicesList.innerHTML = '';
+        
+        // Obtém os IDs dos serviços oferecidos pelo profissional
+        const servicosIds = professional.servicos;
+        
+        // Lista para armazenar os objetos de serviço
+        const servicosDisponiveis = [];
+        
+        // Encontra os objetos de serviço correspondentes
+        for (const categoria in servicos) {
+            servicos[categoria].forEach(servico => {
+                if (servicosIds.includes(servico.id)) {
+                    servicosDisponiveis.push(servico);
+                }
+            });
+        }
+        
+        // Verifica se há serviços disponíveis
+        if (servicosDisponiveis.length === 0) {
+            servicesList.innerHTML = '<p class="no-results">Nenhum serviço disponível para este profissional.</p>';
+            return;
+        }
+        
+        // Adiciona cada serviço à lista
+        servicosDisponiveis.forEach(servico => {
+            const card = document.createElement('div');
+            card.className = 'service-list-card';
+            card.setAttribute('data-id', servico.id);
+            card.innerHTML = `
+                <h3>${servico.nome}</h3>
+                <p>${servico.descricao}</p>
+                <p class="service-duration"><i class="far fa-clock"></i> ${servico.duracao} minutos</p>
+            `;
+            
+            // Event listener para selecionar o serviço
+            card.addEventListener('click', function() {
+                selectedServiceObject = servico;
+                closeModal(serviceModal);
+                openDatetimeModal();
+            });
+            
+            servicesList.appendChild(card);
         });
     }
     
@@ -187,6 +282,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Renderiza as informações do profissional selecionado
         renderSelectedProfessional();
         
+        // Renderiza as informações do serviço selecionado
+        renderSelectedService();
+        
         // Renderiza o calendário
         renderCalendar();
         
@@ -206,6 +304,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>${selectedProfessional.especialidade}</p>
             </div>
             <div class="professional-rating">★ ${selectedProfessional.rating}</div>
+        `;
+    }
+    
+    // Função para renderizar as informações do serviço selecionado
+    function renderSelectedService() {
+        selectedServiceInfo.innerHTML = `
+            <div class="service-info">
+                <h3>${selectedServiceObject.nome}</h3>
+                <p>${selectedServiceObject.descricao}</p>
+                <p class="service-duration"><i class="far fa-clock"></i> ${selectedServiceObject.duracao} minutos</p>
+            </div>
         `;
     }
     
@@ -333,6 +442,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fecha o modal de data e hora
         closeModal(datetimeModal);
         
+        // Cria o objeto de agendamento conforme a estrutura do banco de dados
+        const appointmentData = {
+            id_usuario: 1, // ID do usuário logado (em um sistema real, viria da sessão)
+            id_atendente: selectedProfessional.id,
+            id_servico: selectedServiceObject.id,
+            data_horario: `${selectedDate}T${selectedTime}:00`,
+            situacao: 'pendente'
+        };
+        
+        console.log('Dados do agendamento:', appointmentData);
+        
         // Renderiza os detalhes da confirmação
         renderConfirmationDetails();
         
@@ -346,12 +466,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const formattedDate = formatDateForDisplay(selectedDate);
         
         confirmationDetails.innerHTML = `
-            <p><strong>Serviço:</strong> ${getServiceName(selectedService)}</p>
+            <p><strong>Serviço:</strong> ${selectedServiceObject.nome}</p>
             <p><strong>Profissional:</strong> ${selectedProfessional.nome}</p>
             <p><strong>Especialidade:</strong> ${selectedProfessional.especialidade}</p>
             <p><strong>Data:</strong> ${formattedDate}</p>
             <p><strong>Horário:</strong> ${selectedTime}</p>
+            <p><strong>Duração:</strong> ${selectedServiceObject.duracao} minutos</p>
             <p><strong>Código de agendamento:</strong> #${generateAppointmentCode()}</p>
+            <p><strong>Status:</strong> Pendente de confirmação</p>
         `;
     }
     
@@ -372,19 +494,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function formatDateForDisplay(dateString) {
         const parts = dateString.split('-');
         return `${parts[2]}/${parts[1]}/${parts[0]}`;
-    }
-    
-    // Função para obter o nome do serviço
-    function getServiceName(serviceCode) {
-        const serviceNames = {
-            'saude': 'Saúde',
-            'juridico': 'Jurídico',
-            'carreira': 'Carreira',
-            'contabil': 'Contábil',
-            'assistencia-social': 'Assistência Social'
-        };
-        
-        return serviceNames[serviceCode] || serviceCode;
     }
     
     // Função para gerar um código de agendamento aleatório

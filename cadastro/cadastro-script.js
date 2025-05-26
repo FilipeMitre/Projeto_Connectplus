@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Adiciona a classe active ao botão clicado
             this.classList.add('active');
             
-            // Obtém o tipo de usuário (cliente ou atendente)
+            // Obtém o tipo de usuário (usuario ou atendente)
             const userType = this.getAttribute('data-tab');
             console.log(`Tipo de usuário selecionado: ${userType}`);
             
@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Torna os campos de atendente obrigatórios
                 document.getElementById('area-atuacao').required = true;
+                document.getElementById('qualificacao').required = true;
                 document.getElementById('documentos').required = true;
-                document.getElementById('raio-atendimento').required = true;
             } else {
                 camposAtendente.style.display = 'none';
                 
                 // Remove a obrigatoriedade dos campos de atendente
                 document.getElementById('area-atuacao').required = false;
+                document.getElementById('qualificacao').required = false;
                 document.getElementById('documentos').required = false;
-                document.getElementById('raio-atendimento').required = false;
             }
         });
     });
@@ -75,6 +75,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Máscara para CEP
+    const cepInput = document.getElementById('cep');
+    if (cepInput) {
+        cepInput.addEventListener('input', function(e) {
+            let value = e.target.value;
+            
+            // Remove caracteres não numéricos
+            value = value.replace(/\D/g, '');
+            
+            // Aplica a máscara de CEP: XXXXX-XXX
+            if (value.length <= 8) {
+                value = value.replace(/^(\d{5})(\d)/, '$1-$2');
+            }
+            
+            e.target.value = value;
+        });
+    }
+    
     // Funcionalidade para exibir o nome do arquivo selecionado
     const fileInput = document.getElementById('documentos');
     const fileName = document.querySelector('.file-name');
@@ -102,12 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = document.getElementById('email').value;
             const cpf = document.getElementById('cpf').value;
             const telefone = document.getElementById('telefone').value;
-            const endereco = document.getElementById('endereco').value;
+            const genero = document.getElementById('genero').value;
+            const cep = document.getElementById('cep').value;
+            const cidade = document.getElementById('cidade').value;
+            const rua = document.getElementById('rua').value;
+            const numero = document.getElementById('numero').value;
+            const bairro = document.getElementById('bairro').value;
             const senha = document.getElementById('senha').value;
             const confirmarSenha = document.getElementById('confirmar-senha').value;
             
             // Verificar se os campos comuns estão preenchidos
-            if (!nome || !email || !cpf || !telefone || !endereco || !senha || !confirmarSenha) {
+            if (!nome || !email || !cpf || !telefone || !genero || !cep || !cidade || !rua || !numero || !bairro || !senha || !confirmarSenha) {
                 alert('Por favor, preencha todos os campos obrigatórios.');
                 return;
             }
@@ -118,41 +141,62 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
+            // Preparar objeto com dados do usuário conforme estrutura do banco
+            const userData = {
+                nome: nome,
+                cpf: cpf,
+                email: email,
+                senha: senha,
+                tipo_usuario: tipoUsuario,
+                genero: genero,
+                situacao: 'pendente',
+                telefone: {
+                    telefone: telefone
+                },
+                endereco: {
+                    rua: rua,
+                    cidade: cidade,
+                    cep: cep,
+                    bairro: bairro,
+                    numero: numero
+                }
+            };
+            
             // Se for atendente, verificar os campos específicos
             if (tipoUsuario === 'atendente') {
                 const areaAtuacao = document.getElementById('area-atuacao').value;
+                const qualificacao = document.getElementById('qualificacao').value;
                 const documentos = document.getElementById('documentos').files;
-                const raioAtendimento = document.getElementById('raio-atendimento').value;
                 
-                if (!areaAtuacao || documentos.length === 0 || !raioAtendimento) {
+                if (!areaAtuacao || !qualificacao || documentos.length === 0) {
                     alert('Por favor, preencha todos os campos específicos para atendentes.');
                     return;
                 }
                 
+                // Adicionar dados específicos de atendente
+                userData.atendente = {
+                    qualificacao: qualificacao,
+                    area: areaAtuacao
+                };
+                
                 // Log dos dados específicos de atendente
                 console.log('Dados específicos de atendente:', {
                     areaAtuacao,
-                    documentosNome: documentos[0].name,
-                    raioAtendimento
+                    qualificacao,
+                    documentosNome: documentos[0].name
                 });
             }
             
-            // Log dos dados comuns
-            console.log('Dados de cadastro:', {
-                tipoUsuario,
-                nome,
-                email,
-                cpf,
-                telefone,
-                endereco,
-                senha
-            });
+            // Log dos dados do usuário formatados para o banco
+            console.log('Dados de cadastro formatados para o banco:', userData);
             
             // Simulação de cadastro bem-sucedido
             alert(`Cadastro de ${tipoUsuario} realizado com sucesso! Redirecionando para a página de login...`);
             
             // Redirecionar para a página de login após o cadastro
-            // window.location.href = '../login/login.html';
+            setTimeout(() => {
+                window.location.href = '../login/login.html';
+            }, 1000);
         });
     }
 });

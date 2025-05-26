@@ -1,227 +1,158 @@
-/* Reset e estilos gerais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #1a73e8;
-    color: white;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover, nav ul li a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Main Container */
-.admin-container {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-/* Pending Attendants Section */
-.pending-attendants {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-}
-
-.pending-attendants h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-/* Filter Container */
-.filter-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 25px;
-    align-items: center;
-}
-
-.filter-group {
-    flex: 1;
-    min-width: 150px;
-}
-
-.filter-group select, 
-.filter-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    background-color: white;
-}
-
-.search-group {
-    flex: 2;
-}
-
-.update-button {
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.update-button:hover {
-    background-color: #1558b7;
-}
-
-/* Table Styles */
-.table-container {
-    overflow-x: auto;
-}
-
-.attendants-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.attendants-table th, 
-.attendants-table td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.attendants-table th {
-    background-color: #f2f2f2;
-    font-weight: 600;
-    color: #333;
-}
-
-.attendants-table tbody tr {
-    transition: background-color 0.3s;
-}
-
-.attendants-table tbody tr:hover {
-    background-color: #f9f9f9;
-}
-
-.attendants-table tbody tr:nth-child(even) {
-    background-color: #f5f5f5;
-}
-
-/* Action Buttons */
-.actions-cell {
-    white-space: nowrap;
-}
-
-.approve-button, 
-.reject-button {
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    border: 1px solid;
-    background-color: transparent;
-    transition: background-color 0.3s, color 0.3s;
-    margin-right: 5px;
-}
-
-.approve-button {
-    color: #1a73e8;
-    border-color: #1a73e8;
-}
-
-.approve-button:hover {
-    background-color: #1a73e8;
-    color: white;
-}
-
-.reject-button {
-    color: #e53935;
-    border-color: #e53935;
-}
-
-.reject-button:hover {
-    background-color: #e53935;
-    color: white;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
+// Aguarda o carregamento completo do DOM
+document.addEventListener('DOMContentLoaded', function() {
+    // Dados de exemplo para atendentes pendentes
+    const atendentes = [
+        { id: 1, nome: 'Rafael Chaves', email: 'rafael@gmail.com', documento: 'CRP12345', raio: '10 KM', status: 'pendente', area: 'saude' },
+        { id: 2, nome: 'Maria Silva', email: 'maria@gmail.com', documento: 'CRP67890', raio: '15 KM', status: 'pendente', area: 'juridico' },
+        { id: 3, nome: 'João Santos', email: 'joao@gmail.com', documento: 'CRP54321', raio: '20 KM', status: 'pendente', area: 'carreira' },
+        { id: 4, nome: 'Ana Oliveira', email: 'ana@gmail.com', documento: 'CRP98765', raio: '5 KM', status: 'pendente', area: 'contabil' },
+        { id: 5, nome: 'Carlos Mendes', email: 'carlos@gmail.com', documento: 'CRP45678', raio: '12 KM', status: 'pendente', area: 'assistencia-social' }
+    ];
+    
+    // Seleção de elementos
+    const areaFilter = document.getElementById('area-filter');
+    const statusFilter = document.getElementById('status-filter');
+    const searchInput = document.getElementById('search-input');
+    const updateButton = document.getElementById('update-list');
+    const attendantsList = document.getElementById('attendants-list');
+    
+    // Função para renderizar a lista de atendentes
+    function renderAttendants(attendantsData) {
+        // Limpa a tabela
+        attendantsList.innerHTML = '';
+        
+        // Verifica se há atendentes para exibir
+        if (attendantsData.length === 0) {
+            const emptyRow = document.createElement('tr');
+            emptyRow.innerHTML = `<td colspan="5" style="text-align: center;">Nenhum atendente encontrado</td>`;
+            attendantsList.appendChild(emptyRow);
+            return;
+        }
+        
+        // Adiciona cada atendente à tabela
+        attendantsData.forEach(attendant => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${attendant.nome}</td>
+                <td>${attendant.email}</td>
+                <td>${attendant.documento}</td>
+                <td>${attendant.raio}</td>
+                <td class="actions-cell">
+                    <button class="approve-button" data-id="${attendant.id}">Aprovar</button>
+                    <button class="reject-button" data-id="${attendant.id}">Reprovar</button>
+                </td>
+            `;
+            attendantsList.appendChild(row);
+        });
+        
+        // Adiciona event listeners aos botões de ação
+        addActionButtonListeners();
     }
     
-    nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    // Função para adicionar event listeners aos botões de ação
+    function addActionButtonListeners() {
+        // Botões de aprovação
+        const approveButtons = document.querySelectorAll('.approve-button');
+        approveButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const attendantId = this.getAttribute('data-id');
+                approveAttendant(attendantId);
+            });
+        });
+        
+        // Botões de reprovação
+        const rejectButtons = document.querySelectorAll('.reject-button');
+        rejectButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const attendantId = this.getAttribute('data-id');
+                rejectAttendant(attendantId);
+            });
+        });
     }
     
-    nav ul li {
-        margin: 5px;
+    // Função para aprovar um atendente
+    function approveAttendant(id) {
+        // Encontra o atendente pelo ID
+        const index = atendentes.findIndex(a => a.id == id);
+        
+        if (index !== -1) {
+            // Atualiza o status do atendente
+            atendentes[index].status = 'aprovado';
+            
+            // Exibe mensagem de sucesso
+            alert(`Atendente ${atendentes[index].nome} aprovado com sucesso!`);
+            
+            // Atualiza a lista
+            filterAttendants();
+        }
     }
     
-    .filter-container {
-        flex-direction: column;
+    // Função para reprovar um atendente
+    function rejectAttendant(id) {
+        // Encontra o atendente pelo ID
+        const index = atendentes.findIndex(a => a.id == id);
+        
+        if (index !== -1) {
+            // Atualiza o status do atendente
+            atendentes[index].status = 'reprovado';
+            
+            // Exibe mensagem de sucesso
+            alert(`Atendente ${atendentes[index].nome} reprovado.`);
+            
+            // Atualiza a lista
+            filterAttendants();
+        }
     }
     
-    .filter-group {
-        width: 100%;
+    // Função para filtrar atendentes
+    function filterAttendants() {
+        // Obtém os valores dos filtros
+        const areaValue = areaFilter.value;
+        const statusValue = statusFilter.value;
+        const searchValue = searchInput.value.toLowerCase();
+        
+        // Filtra os atendentes
+        const filteredAttendants = atendentes.filter(attendant => {
+            // Filtro de área
+            const areaMatch = !areaValue || attendant.area === areaValue;
+            
+            // Filtro de status
+            const statusMatch = !statusValue || attendant.status === statusValue;
+            
+            // Filtro de busca
+            const searchMatch = !searchValue || 
+                attendant.nome.toLowerCase().includes(searchValue) || 
+                attendant.email.toLowerCase().includes(searchValue);
+            
+            return areaMatch && statusMatch && searchMatch;
+        });
+        
+        // Renderiza os atendentes filtrados
+        renderAttendants(filteredAttendants);
     }
     
-    .attendants-table {
-        font-size: 0.9rem;
+    // Event listener para o botão de atualizar lista
+    if (updateButton) {
+        updateButton.addEventListener('click', filterAttendants);
     }
     
-    .actions-cell {
-        display: flex;
-        flex-direction: column;
+    // Event listener para o campo de busca
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            // Atualiza a lista ao digitar
+            filterAttendants();
+        });
     }
     
-    .approve-button, 
-    .reject-button {
-        margin-bottom: 5px;
-        width: 100%;
+    // Event listeners para os selects de filtro
+    if (areaFilter) {
+        areaFilter.addEventListener('change', filterAttendants);
     }
-}
+    
+    if (statusFilter) {
+        statusFilter.addEventListener('change', filterAttendants);
+    }
+    
+    // Inicializa a tabela com todos os atendentes
+    renderAttendants(atendentes);
+});

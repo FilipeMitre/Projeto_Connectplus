@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const loginForm = document.getElementById('login-form');
     
+    // Variável para armazenar o tipo de usuário selecionado
+    let tipoUsuarioSelecionado = 'usuario'; // Valor padrão
+    
     // Funcionalidade para as abas de tipo de usuário
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -13,12 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Adiciona a classe active ao botão clicado
             this.classList.add('active');
             
-            // Obtém o tipo de usuário (cliente ou atendente)
-            const userType = this.getAttribute('data-tab');
-            console.log(`Tipo de usuário selecionado: ${userType}`);
-            
-            // Aqui você pode personalizar o formulário com base no tipo de usuário
-            // Por exemplo, adicionar campos específicos para atendentes
+            // Obtém o tipo de usuário (usuario, atendente ou admin)
+            tipoUsuarioSelecionado = this.getAttribute('data-tab');
+            console.log(`Tipo de usuário selecionado: ${tipoUsuarioSelecionado}`);
         });
     });
     
@@ -29,23 +29,70 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Obter os valores dos campos
             const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+            const senha = document.getElementById('senha').value;
             
             // Verificar se os campos estão preenchidos
-            if (!email || !password) {
+            if (!email || !senha) {
                 alert('Por favor, preencha todos os campos.');
                 return;
             }
             
-            // Aqui você pode adicionar a lógica de autenticação
-            // Por exemplo, enviar os dados para um servidor
-            console.log('Tentativa de login com:', { email, password });
+            // Criar objeto com os dados de login
+            const loginData = {
+                email: email,
+                senha: senha,
+                tipo_usuario: tipoUsuarioSelecionado
+            };
             
-            // Simulação de login bem-sucedido
-            alert('Login realizado com sucesso! Redirecionando...');
+            console.log('Dados de login:', loginData);
             
-            // Redirecionar para a página inicial após o login
-            // window.location.href = 'index.html';
+            // Simulação de verificação de login
+            // Em um ambiente real, isso seria uma chamada de API para verificar as credenciais
+            let redirectUrl = '';
+            let mensagem = '';
+            
+            // Simulação de diferentes tipos de usuário e situações
+            if (tipoUsuarioSelecionado === 'usuario') {
+                // Verificar se é um usuário comum
+                if (email === 'usuario@example.com' && senha === 'senha123') {
+                    redirectUrl = '../index.html';
+                    mensagem = 'Login de usuário realizado com sucesso!';
+                }
+            } else if (tipoUsuarioSelecionado === 'atendente') {
+                // Verificar se é um atendente
+                if (email === 'atendente@example.com' && senha === 'senha123') {
+                    // Verificar se o atendente está aprovado
+                    const situacao = 'aprovado'; // Simulação - em um sistema real, viria do banco
+                    
+                    if (situacao === 'aprovado') {
+                        redirectUrl = '../atendente/dashboard.html';
+                        mensagem = 'Login de atendente realizado com sucesso!';
+                    } else if (situacao === 'pendente') {
+                        mensagem = 'Seu cadastro ainda está em análise. Por favor, aguarde a aprovação.';
+                    } else if (situacao === 'bloqueado') {
+                        mensagem = 'Seu cadastro foi bloqueado. Entre em contato com o suporte.';
+                    }
+                }
+            } else if (tipoUsuarioSelecionado === 'admin') {
+                // Verificar se é um administrador
+                if (email === 'admin@example.com' && senha === 'admin123') {
+                    redirectUrl = '../admin-panel/admin-panel.html';
+                    mensagem = 'Login de administrador realizado com sucesso!';
+                }
+            }
+            
+            if (redirectUrl) {
+                // Login bem-sucedido
+                alert(mensagem);
+                
+                // Redirecionar para a página apropriada
+                setTimeout(() => {
+                    window.location.href = redirectUrl;
+                }, 1000);
+            } else {
+                // Login falhou
+                alert('Email ou senha incorretos, ou tipo de usuário inválido.');
+            }
         });
     }
     
@@ -54,7 +101,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (forgotPasswordLink) {
         forgotPasswordLink.addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Funcionalidade de recuperação de senha em desenvolvimento.');
+            
+            const email = document.getElementById('email').value;
+            
+            if (!email) {
+                alert('Por favor, informe seu email antes de solicitar a recuperação de senha.');
+                return;
+            }
+            
+            // Simulação de envio de email de recuperação
+            alert(`Um email de recuperação de senha foi enviado para ${email}. Por favor, verifique sua caixa de entrada.`);
         });
     }
 });

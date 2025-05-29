@@ -1,0 +1,179 @@
+// static/js/authManager.js
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    const token = localStorage.getItem('amadoAuthToken');
+    const userType = localStorage.getItem('amadoUserType'); // 'CLIENTE', 'ATENDENTE', 'ADMIN'
+    const userName = localStorage.getItem('amadoUserName') || 'Usuário'; // Pegar o nome do usuário
+
+    const navElement = header.querySelector('nav ul');
+    const loginButtonContainer = header.querySelector('.login-button-container');
+    const userMenuContainer = header.querySelector('.user-menu-container'); // Para o menu do usuário logado
+
+    if (navElement) navElement.innerHTML = ''; // Limpa a navegação padrão para recriar
+    if (loginButtonContainer) loginButtonContainer.innerHTML = ''; // Limpa o botão de login padrão
+
+    let navLinks = [];
+    let userSpecificNav = '';
+
+    if (token && userType) {
+        // Usuário Logado
+        navLinks = [
+            { text: 'Home', href: '/static/index.html' },
+        ];
+
+        if (userType === 'CLIENTE') {
+            navLinks.push(
+                { text: 'Encontrar Profissionais', href: '/static/agendamento/agendamento.html' },
+                { text: 'Meus Agendamentos', href: '/static/cliente/meus-agendamentos.html' }
+            );
+            userSpecificNav = `
+                <div class="user-menu">
+                    <div class="user-dropdown">
+                        <button class="user-button">
+                            <i class="fas fa-user-circle"></i> ${userName.split(' ')[0]}
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/static/cliente/perfil.html">Meu Perfil</a>
+                            <a href="/static/cliente/meus-agendamentos.html">Meus Agendamentos</a>
+                            <a href="/static/cliente/notificacoes.html">Notificações</a>
+                            <a href="#" id="logoutButton">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else if (userType === 'ATENDENTE') {
+            navLinks.push(
+                { text: 'Minha Agenda', href: '/static/atendente/minha-agenda.html' },
+                { text: 'Solicitações', href: '/static/atendente/solicitacoes.html' }
+            );
+            userSpecificNav = `
+                <div class="user-menu">
+                    <div class="user-dropdown">
+                        <button class="user-button">
+                            <i class="fas fa-user-md"></i> ${userName.split(' ')[0]}
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/static/atendente/perfil.html">Meu Perfil Profissional</a>
+                            <a href="/static/atendente/minha-agenda.html">Minha Agenda</a>
+                            <a href="/static/atendente/solicitacoes.html">Gerenciar Agendamentos</a>
+                            <a href="/static/atendente/avaliacoes.html">Minhas Avaliações</a>
+                            <a href="/static/atendente/notificacoes.html">Notificações</a>
+                            <a href="#" id="logoutButton">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else if (userType === 'ADMIN') {
+            navLinks.push(
+                { text: 'Gerenciar Atendentes', href: '/static/admin/admin-panel.html' },
+                { text: 'Gerenciar Clientes', href: '/static/admin/gerenciar-clientes.html' },
+                { text: 'Todos Agendamentos', href: '/static/admin/todos-agendamentos.html' }
+            );
+            userSpecificNav = `
+                <div class="user-menu">
+                    <div class="user-dropdown">
+                        <button class="user-button">
+                            <i class="fas fa-user-shield"></i> Admin
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/static/admin/admin-panel.html">Painel Principal</a>
+                            <a href="/static/admin/configuracoes.html">Configurações</a>
+                            <a href="#" id="logoutButton">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Adiciona links comuns para usuários logados, se houver
+        navLinks.push({ text: 'Suporte', href: '/static/contato/contato.html' });
+
+
+    } else {
+        // Usuário Deslogado
+        navLinks = [
+            { text: 'Home', href: '/static/index.html', active: true }, // Exemplo de active
+            { text: 'Encontrar Profissionais', href: '/static/agendamento/agendamento.html' },
+            { text: 'Planos', href: '/static/planos/planos.html' },
+            { text: 'Quem Somos', href: '/static/quem-somos/quem-somos.html' },
+            { text: 'Contato', href: '/static/contato/contato.html' }
+        ];
+        userSpecificNav = `
+            <div class="login-button-container">
+                <a href="/static/login/login.html" class="login-button">
+                    <i class="fas fa-user-circle"></i>
+                    Fazer login
+                </a>
+                <a href="/static/cadastro/cadastro.html" class="signup-button">
+                    <i class="fas fa-user-plus"></i>
+                    Cadastre-se
+                </a>
+            </div>
+        `;
+    }
+
+    // Renderiza os links de navegação
+    if (navElement) {
+        navLinks.forEach(link => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = link.href;
+            a.textContent = link.text;
+            // Verifica a URL atual para adicionar a classe 'active'
+            if (window.location.pathname.endsWith(link.href.substring(link.href.lastIndexOf('/')))) {
+                a.classList.add('active');
+            }
+            li.appendChild(a);
+            navElement.appendChild(li);
+        });
+    }
+    
+    // Insere a navegação específica do usuário (login/menu dropdown)
+    const navContainer = header.querySelector('nav');
+    if (navContainer) {
+        // Remove o container antigo de login se existir (o do HTML original)
+        const oldLoginContainer = header.querySelector('.login-button-container');
+        if (oldLoginContainer) {
+            oldLoginContainer.remove();
+        }
+        navContainer.insertAdjacentHTML('afterend', userSpecificNav);
+    }
+
+
+    // Lógica de Logout
+    const logoutButton = document.getElementById('logoutButton');
+    if (logoutButton) {
+        logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('amadoAuthToken');
+            localStorage.removeItem('amadoUserType');
+            localStorage.removeItem('amadoUserId');
+            localStorage.removeItem('amadoUserName');
+            // Idealmente, chamar um endpoint /api/auth/logout no backend também
+            window.location.href = '/static/index.html';
+        });
+    }
+
+    // Ativar dropdown do menu do usuário
+    const userDropdownButton = document.querySelector('.user-button');
+    if (userDropdownButton) {
+        userDropdownButton.addEventListener('click', function() {
+            this.nextElementSibling.classList.toggle('show-dropdown');
+        });
+    }
+
+    // Fechar dropdown se clicar fora
+    window.onclick = function(event) {
+        if (!event.target.matches('.user-button') && !event.target.closest('.user-button')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show-dropdown')) {
+                    openDropdown.classList.remove('show-dropdown');
+                }
+            }
+        }
+    }
+});

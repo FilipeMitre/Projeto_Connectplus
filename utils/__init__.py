@@ -1,1 +1,0 @@
-# Este arquivo está vazio, apenas para indicar que o diretório é um pacote Python

@@ -12,7 +12,7 @@ class Config:
     # Configurações do banco de dados
     DB_HOST = os.environ.get('DB_HOST') or 'localhost'
     DB_USER = os.environ.get('DB_USER') or 'root'
-    DB_PASSWORD = os.environ.get('DB_PASSWORD') or 'learnpro'
+    DB_PASSWORD = os.environ.get('DB_PASSWORD') or 'sua_senha'
     DB_NAME = os.environ.get('DB_NAME') or 'site_agendamento'
     
     # Configurações JWT

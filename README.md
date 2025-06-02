@@ -54,6 +54,8 @@ CREATE TABLE usuario (
     ultimo_login TIMESTAMP NULL
 ) COMMENT 'Tabela central de usuários da plataforma.';
 
+ALTER TABLE usuario ADD COLUMN senha_texto VARCHAR(255);
+
 -- Tabela para armazenar múltiplos telefones por usuário
 CREATE TABLE telefone (
     id_telefone INT AUTO_INCREMENT PRIMARY KEY,
@@ -714,7 +716,18 @@ SET
     tipo_usuario = 'ADMIN',
     situacao = 'ATIVO'
 WHERE 
-    email = 'filipe.mitre21@gmail.com'; -- Substitua pelo email real
+    email = 'filipe.mitre21@gmail.com'; -- Substitua pelo email real;
+    
+CREATE TABLE IF NOT EXISTS codigos_recuperacao (
+    id_usuario INT NOT NULL,
+    codigo VARCHAR(6) NOT NULL,
+    data_expiracao DATETIME NOT NULL,
+    tentativas INT DEFAULT 0,
+    PRIMARY KEY (id_usuario),
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
 
 # Não esquecer de dar run no app.py
 Não é usando o index.html, se for rodar ele, a API não irá funcionar; tem que rodar a API usando o app.py e acessar o http://localhost:5000 ou o local onde for hospedado seu código

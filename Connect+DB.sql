@@ -704,7 +704,7 @@ SET
     tipo_usuario = 'ADMIN',
     situacao = 'ATIVO'
 WHERE 
-    email = 'filipe.mitre21@gmail.com'; -- Substitua pelo email real;
+    email = 'exemplo@gmail.com'; -- Substitua pelo email real;
     
 CREATE TABLE IF NOT EXISTS codigos_recuperacao (
     id_usuario INT NOT NULL,

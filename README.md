@@ -1,4 +1,4 @@
-# Connect+ 2.2
+# Connect+
 
 ## Descrição do Projeto
 

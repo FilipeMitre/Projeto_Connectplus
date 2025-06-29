@@ -50,9 +50,6 @@ Siga estes passos para configurar e rodar o projeto localmente:
     *   Crie um banco de dados para a aplicação.
     *   Atualize o arquivo `config.py` com as credenciais e detalhes de conexão do seu banco de dados. Você pode precisar criar um arquivo `.env` na raiz do projeto se a configuração usar variáveis de ambiente.
 
-5.  **Execute as migrações do banco de dados (se aplicável):**
-    *   (Nota: Não encontrei um script de migração explícito na estrutura fornecida. Você pode precisar adicionar instruções aqui se houver um.)
-
 ## Como Rodar a Aplicação
 
 Com o ambiente virtual ativado e as dependências instaladas, você pode iniciar a aplicação Flask:

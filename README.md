@@ -1,6 +1,6 @@
 # Connect+
 
-**Connect+** é uma iniciativa dedicada a fornecer um espaço seguro e acolhedor para a comunidade LGBTQIAPN+, facilitando o acesso a serviços de apoio qualificados nas áreas de saúde, jurídica, carreira, contábil e assistência social. Nossa missão é conectar pessoas a profissionais que compreendem suas vivências e necessidades específicas.
+**Connect+** é uma iniciativa dedicada a fornecer um espaço seguro e acolhedor, facilitando o acesso a serviços de apoio qualificados nas áreas de saúde, jurídica, carreira, contábil e assistência social. Nossa missão é conectar pessoas a profissionais que compreendem suas vivências e necessidades específicas.
 
 ---
 

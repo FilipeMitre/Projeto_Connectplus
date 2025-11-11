@@ -1,0 +1,588 @@
+14/10/2025 17:21:52 [INFO] app:17 - Iniciando criação da aplicação Flask...
+14/10/2025 17:21:52 [INFO] app:22 - Registrando blueprints...
+14/10/2025 17:21:52 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+14/10/2025 17:21:52 [INFO] app:75 - Aplicação Flask criada com sucesso
+14/10/2025 17:21:52 [INFO] app:80 - Iniciando servidor Flask...
+14/10/2025 17:21:55 [INFO] app:17 - Iniciando criação da aplicação Flask...
+14/10/2025 17:21:55 [INFO] app:22 - Registrando blueprints...
+14/10/2025 17:21:55 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+14/10/2025 17:21:55 [INFO] app:75 - Aplicação Flask criada com sucesso
+14/10/2025 17:21:55 [INFO] app:80 - Iniciando servidor Flask...
+14/10/2025 17:29:49 [DEBUG] app:32 - Acessando rota raiz /
+14/10/2025 17:29:49 [DEBUG] app:38 - Tentando servir arquivo: css/styles.css
+14/10/2025 17:29:49 [INFO] app:49 - Servindo arquivo estático: css/styles.css
+14/10/2025 17:29:49 [DEBUG] app:38 - Tentando servir arquivo: Slogan_atendimento.png
+14/10/2025 17:29:49 [INFO] app:49 - Servindo arquivo estático: Slogan_atendimento.png
+14/10/2025 17:29:49 [DEBUG] app:38 - Tentando servir arquivo: calendario.png
+14/10/2025 17:29:49 [INFO] app:49 - Servindo arquivo estático: calendario.png
+14/10/2025 17:29:49 [DEBUG] app:38 - Tentando servir arquivo: js/script.js
+14/10/2025 17:29:49 [INFO] app:49 - Servindo arquivo estático: js/script.js
+14/10/2025 17:29:50 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+14/10/2025 17:29:50 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+14/10/2025 17:29:50 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+14/10/2025 17:29:50 [DEBUG] app:38 - Tentando servir arquivo: logo_atendimento.png
+14/10/2025 17:29:50 [INFO] app:49 - Servindo arquivo estático: logo_atendimento.png
+14/10/2025 17:29:57 [DEBUG] validators:11 - Validando email: filipe.mitre21@gmail.com
+14/10/2025 17:29:57 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:29:58 [ERROR] db:25 - Erro ao conectar ao banco de dados: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+14/10/2025 17:30:00 [INFO] app:17 - Iniciando criação da aplicação Flask...
+14/10/2025 17:30:00 [INFO] app:22 - Registrando blueprints...
+14/10/2025 17:30:00 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+14/10/2025 17:30:00 [INFO] app:75 - Aplicação Flask criada com sucesso
+14/10/2025 17:30:00 [INFO] app:80 - Iniciando servidor Flask...
+14/10/2025 17:30:28 [DEBUG] validators:11 - Validando email: filipe.mitre21@gmail.com
+14/10/2025 17:30:28 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:30:28 [ERROR] db:25 - Erro ao conectar ao banco de dados: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+14/10/2025 17:30:48 [INFO] app:17 - Iniciando criação da aplicação Flask...
+14/10/2025 17:30:48 [INFO] app:22 - Registrando blueprints...
+14/10/2025 17:30:48 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+14/10/2025 17:30:48 [INFO] app:75 - Aplicação Flask criada com sucesso
+14/10/2025 17:30:48 [INFO] app:80 - Iniciando servidor Flask...
+14/10/2025 17:30:57 [INFO] app:17 - Iniciando criação da aplicação Flask...
+14/10/2025 17:30:57 [INFO] app:22 - Registrando blueprints...
+14/10/2025 17:30:57 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+14/10/2025 17:30:57 [INFO] app:75 - Aplicação Flask criada com sucesso
+14/10/2025 17:30:57 [INFO] app:80 - Iniciando servidor Flask...
+14/10/2025 17:30:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+14/10/2025 17:30:59 [INFO] app:22 - Registrando blueprints...
+14/10/2025 17:30:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+14/10/2025 17:30:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+14/10/2025 17:30:59 [INFO] app:80 - Iniciando servidor Flask...
+14/10/2025 17:31:12 [DEBUG] validators:11 - Validando email: filipe.mitre21@gmail.com
+14/10/2025 17:31:12 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:12 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:13 [DEBUG] auth:27 - Verificando senha
+14/10/2025 17:31:13 [DEBUG] auth:30 - Verificação de senha concluída
+14/10/2025 17:31:13 [DEBUG] auth:38 - Gerando token JWT para usuário 1 do tipo ADMIN
+14/10/2025 17:31:13 [INFO] auth:46 - Token JWT gerado com sucesso para usuário 1
+14/10/2025 17:31:14 [DEBUG] db:32 - Executando query: 
+        SELECT
+            u.id_usuario, u.nome_completo, u.nome_social, u.email, u.identidade_genero,
+            ad.area_atuacao, ad.qualificacao_descricao, ad.especialidades,
+            ad.registro_profissional, ad.anos_experiencia, ad.curriculo_link,
+            ad.aceita_atendimento_online, ad.aceita_atendimento_presencial,
+            ad.duracao_padrao_atendimento_min,
+            (SELECT ROUND(AVG(aval.nota), 1) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS media_avaliacoes,
+            (SELECT COUNT(aval.id_avaliacao) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS total_avaliacoes,
+            u.data_criacao AS data_criacao_usuario, u.situacao AS situacao_usuario
+
+        FROM usuario u
+        JOIN atendente_detalhes ad ON u.id_usuario = ad.id_usuario
+        WHERE u.tipo_usuario = 'ATENDENTE'
+     ORDER BY media_avaliacoes DESC, u.nome_completo ASC
+14/10/2025 17:31:14 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:14 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:14 [DEBUG] db:41 - Query retornou 3 registros
+14/10/2025 17:31:14 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:29 [DEBUG] db:32 - Executando query: 
+        SELECT
+            u.id_usuario, u.nome_completo, u.nome_social, u.email, u.identidade_genero,
+            ad.area_atuacao, ad.qualificacao_descricao, ad.especialidades,
+            ad.registro_profissional, ad.anos_experiencia, ad.curriculo_link,
+            ad.aceita_atendimento_online, ad.aceita_atendimento_presencial,
+            ad.duracao_padrao_atendimento_min,
+            (SELECT ROUND(AVG(aval.nota), 1) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS media_avaliacoes,
+            (SELECT COUNT(aval.id_avaliacao) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS total_avaliacoes,
+            u.data_criacao AS data_criacao_usuario, u.situacao AS situacao_usuario
+
+        FROM usuario u
+        JOIN atendente_detalhes ad ON u.id_usuario = ad.id_usuario
+        WHERE u.tipo_usuario = 'ATENDENTE'
+     ORDER BY media_avaliacoes DESC, u.nome_completo ASC
+14/10/2025 17:31:29 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:29 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:29 [DEBUG] db:41 - Query retornou 3 registros
+14/10/2025 17:31:29 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:30 [DEBUG] auth:73 - Verificando token de autenticação
+14/10/2025 17:31:30 [DEBUG] app:38 - Tentando servir arquivo: favicon.ico
+14/10/2025 17:31:30 [DEBUG] auth:54 - Tentando decodificar token JWT
+14/10/2025 17:31:30 [DEBUG] auth:57 - Token JWT decodificado com sucesso para usuário 1
+14/10/2025 17:31:30 [DEBUG] auth:89 - Buscando dados do usuário 1
+14/10/2025 17:31:30 [WARNING] app:63 - Arquivo não encontrado: favicon.ico
+14/10/2025 17:31:30 [DEBUG] db:32 - Executando query: SELECT id_usuario, nome_completo, email, tipo_usuario, situacao FROM usuario WHERE id_usuario = %s
+14/10/2025 17:31:30 [INFO] app:72 - Página não encontrada, redirecionando para index: /favicon.ico
+14/10/2025 17:31:30 [DEBUG] db:34 - Parâmetros: (1,)
+14/10/2025 17:31:30 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:30 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:30 [DEBUG] db:44 - Query retornou um registro
+14/10/2025 17:31:30 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:30 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+14/10/2025 17:31:30 [DEBUG] db:32 - Executando query: 
+        SELECT
+            ag.id_agendamento, ag.data_hora_inicio, ag.duracao_minutos, ag.modalidade, ag.status_agendamento,
+            ag.assunto_solicitacao, ag.link_atendimento_online, ag.observacoes_atendente,
+            cli.nome_completo AS nome_cliente, cli.id_usuario AS id_cliente,
+            att.nome_completo AS nome_atendente, att.id_usuario AS id_atendente,
+            ad.area_atuacao AS area_atendente,
+            (SELECT COUNT(*) FROM avaliacao av WHERE av.id_agendamento = ag.id_agendamento) > 0 AS avaliacao_existente
+        FROM agendamento ag
+        JOIN usuario cli ON ag.id_cliente = cli.id_usuario
+        JOIN usuario att ON ag.id_atendente = att.id_usuario
+        JOIN atendente_detalhes ad ON att.id_usuario = ad.id_usuario
+        WHERE
+     1=1  ORDER BY ag.data_hora_inicio DESC
+14/10/2025 17:31:30 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:30 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:30 [DEBUG] db:41 - Query retornou 5 registros
+14/10/2025 17:31:30 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:31 [DEBUG] auth:73 - Verificando token de autenticação
+14/10/2025 17:31:31 [DEBUG] auth:54 - Tentando decodificar token JWT
+14/10/2025 17:31:31 [DEBUG] auth:57 - Token JWT decodificado com sucesso para usuário 1
+14/10/2025 17:31:31 [DEBUG] auth:89 - Buscando dados do usuário 1
+14/10/2025 17:31:31 [DEBUG] db:32 - Executando query: SELECT id_usuario, nome_completo, email, tipo_usuario, situacao FROM usuario WHERE id_usuario = %s
+14/10/2025 17:31:31 [DEBUG] db:34 - Parâmetros: (1,)
+14/10/2025 17:31:31 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:31 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:31 [DEBUG] db:44 - Query retornou um registro
+14/10/2025 17:31:31 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:31 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+14/10/2025 17:31:31 [DEBUG] auth:121 - Verificando permissão de administrador
+14/10/2025 17:31:31 [DEBUG] auth:125 - Admin 1 autorizado
+14/10/2025 17:31:31 [DEBUG] db:32 - Executando query: SELECT id_usuario, nome_completo, email, cpf, tipo_usuario, situacao, data_criacao FROM usuario WHERE 1=1 AND tipo_usuario = %s ORDER BY data_criacao DESC
+14/10/2025 17:31:31 [DEBUG] db:34 - Parâmetros: ('CLIENTE',)
+14/10/2025 17:31:31 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:31 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:31 [DEBUG] db:41 - Query retornou 7 registros
+14/10/2025 17:31:31 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:32 [DEBUG] auth:73 - Verificando token de autenticação
+14/10/2025 17:31:32 [DEBUG] auth:54 - Tentando decodificar token JWT
+14/10/2025 17:31:32 [DEBUG] auth:57 - Token JWT decodificado com sucesso para usuário 1
+14/10/2025 17:31:32 [DEBUG] auth:89 - Buscando dados do usuário 1
+14/10/2025 17:31:32 [DEBUG] db:32 - Executando query: SELECT id_usuario, nome_completo, email, tipo_usuario, situacao FROM usuario WHERE id_usuario = %s
+14/10/2025 17:31:32 [DEBUG] db:34 - Parâmetros: (1,)
+14/10/2025 17:31:32 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:32 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:32 [DEBUG] db:44 - Query retornou um registro
+14/10/2025 17:31:32 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:32 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+14/10/2025 17:31:32 [DEBUG] db:32 - Executando query: 
+        SELECT
+            ag.id_agendamento, ag.data_hora_inicio, ag.duracao_minutos, ag.modalidade, ag.status_agendamento,
+            ag.assunto_solicitacao, ag.link_atendimento_online, ag.observacoes_atendente,
+            cli.nome_completo AS nome_cliente, cli.id_usuario AS id_cliente,
+            att.nome_completo AS nome_atendente, att.id_usuario AS id_atendente,
+            ad.area_atuacao AS area_atendente,
+            (SELECT COUNT(*) FROM avaliacao av WHERE av.id_agendamento = ag.id_agendamento) > 0 AS avaliacao_existente
+        FROM agendamento ag
+        JOIN usuario cli ON ag.id_cliente = cli.id_usuario
+        JOIN usuario att ON ag.id_atendente = att.id_usuario
+        JOIN atendente_detalhes ad ON att.id_usuario = ad.id_usuario
+        WHERE
+     1=1  ORDER BY ag.data_hora_inicio DESC
+14/10/2025 17:31:32 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:32 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:32 [DEBUG] db:41 - Query retornou 5 registros
+14/10/2025 17:31:32 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:32 [DEBUG] app:38 - Tentando servir arquivo: favicon.ico
+14/10/2025 17:31:32 [WARNING] app:63 - Arquivo não encontrado: favicon.ico
+14/10/2025 17:31:32 [INFO] app:72 - Página não encontrada, redirecionando para index: /favicon.ico
+14/10/2025 17:31:45 [DEBUG] db:32 - Executando query: 
+        SELECT
+            u.id_usuario, u.nome_completo, u.nome_social, u.email, u.identidade_genero,
+            ad.area_atuacao, ad.qualificacao_descricao, ad.especialidades,
+            ad.registro_profissional, ad.anos_experiencia, ad.curriculo_link,
+            ad.aceita_atendimento_online, ad.aceita_atendimento_presencial,
+            ad.duracao_padrao_atendimento_min,
+            (SELECT ROUND(AVG(aval.nota), 1) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS media_avaliacoes,
+            (SELECT COUNT(aval.id_avaliacao) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS total_avaliacoes,
+            u.data_criacao AS data_criacao_usuario, u.situacao AS situacao_usuario
+
+        FROM usuario u
+        JOIN atendente_detalhes ad ON u.id_usuario = ad.id_usuario
+        WHERE u.tipo_usuario = 'ATENDENTE'
+     ORDER BY media_avaliacoes DESC, u.nome_completo ASC
+14/10/2025 17:31:45 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:45 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:45 [DEBUG] db:41 - Query retornou 3 registros
+14/10/2025 17:31:45 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:47 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+14/10/2025 17:31:47 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+14/10/2025 17:31:47 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+14/10/2025 17:31:57 [DEBUG] validators:11 - Validando email: daniel@gmail.com
+14/10/2025 17:31:57 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:57 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:57 [DEBUG] auth:27 - Verificando senha
+14/10/2025 17:31:58 [DEBUG] auth:30 - Verificação de senha concluída
+14/10/2025 17:31:58 [DEBUG] auth:38 - Gerando token JWT para usuário 2 do tipo CLIENTE
+14/10/2025 17:31:58 [INFO] auth:46 - Token JWT gerado com sucesso para usuário 2
+14/10/2025 17:31:59 [DEBUG] auth:73 - Verificando token de autenticação
+14/10/2025 17:31:59 [DEBUG] auth:54 - Tentando decodificar token JWT
+14/10/2025 17:31:59 [DEBUG] auth:57 - Token JWT decodificado com sucesso para usuário 2
+14/10/2025 17:31:59 [DEBUG] auth:89 - Buscando dados do usuário 2
+14/10/2025 17:31:59 [DEBUG] db:32 - Executando query: SELECT id_usuario, nome_completo, email, tipo_usuario, situacao FROM usuario WHERE id_usuario = %s
+14/10/2025 17:31:59 [DEBUG] db:34 - Parâmetros: (2,)
+14/10/2025 17:31:59 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:59 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:59 [DEBUG] db:44 - Query retornou um registro
+14/10/2025 17:31:59 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:31:59 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+14/10/2025 17:31:59 [DEBUG] db:32 - Executando query: 
+        SELECT
+            ag.id_agendamento, ag.data_hora_inicio, ag.duracao_minutos, ag.modalidade, ag.status_agendamento,
+            ag.assunto_solicitacao, ag.link_atendimento_online, ag.observacoes_atendente,
+            cli.nome_completo AS nome_cliente, cli.id_usuario AS id_cliente,
+            att.nome_completo AS nome_atendente, att.id_usuario AS id_atendente,
+            ad.area_atuacao AS area_atendente,
+            (SELECT COUNT(*) FROM avaliacao av WHERE av.id_agendamento = ag.id_agendamento) > 0 AS avaliacao_existente
+        FROM agendamento ag
+        JOIN usuario cli ON ag.id_cliente = cli.id_usuario
+        JOIN usuario att ON ag.id_atendente = att.id_usuario
+        JOIN atendente_detalhes ad ON att.id_usuario = ad.id_usuario
+        WHERE
+     ag.id_cliente = %s ORDER BY ag.data_hora_inicio DESC
+14/10/2025 17:31:59 [DEBUG] db:34 - Parâmetros: (2,)
+14/10/2025 17:31:59 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:31:59 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:31:59 [DEBUG] db:41 - Query retornou 2 registros
+14/10/2025 17:31:59 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:32:09 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+14/10/2025 17:32:09 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+14/10/2025 17:32:09 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+14/10/2025 17:47:24 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+14/10/2025 17:47:24 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+14/10/2025 17:47:24 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+14/10/2025 17:47:32 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+14/10/2025 17:47:32 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+14/10/2025 17:47:32 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+14/10/2025 17:47:38 [DEBUG] db:32 - Executando query: 
+        SELECT
+            u.id_usuario, u.nome_completo, u.nome_social, u.email, u.identidade_genero,
+            ad.area_atuacao, ad.qualificacao_descricao, ad.especialidades,
+            ad.registro_profissional, ad.anos_experiencia, ad.curriculo_link,
+            ad.aceita_atendimento_online, ad.aceita_atendimento_presencial,
+            ad.duracao_padrao_atendimento_min,
+            (SELECT ROUND(AVG(aval.nota), 1) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS media_avaliacoes,
+            (SELECT COUNT(aval.id_avaliacao) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS total_avaliacoes,
+            u.data_criacao AS data_criacao_usuario, u.situacao AS situacao_usuario
+
+        FROM usuario u
+        JOIN atendente_detalhes ad ON u.id_usuario = ad.id_usuario
+        WHERE u.tipo_usuario = 'ATENDENTE'
+     AND u.situacao = %s ORDER BY media_avaliacoes DESC, u.nome_completo ASC
+14/10/2025 17:47:38 [DEBUG] db:34 - Parâmetros: ('ATIVO',)
+14/10/2025 17:47:38 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:47:42 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:47:42 [DEBUG] db:41 - Query retornou 3 registros
+14/10/2025 17:47:42 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:48:33 [DEBUG] db:32 - Executando query: 
+        SELECT
+            u.id_usuario, u.nome_completo, u.nome_social, u.email, u.identidade_genero,
+            ad.area_atuacao, ad.qualificacao_descricao, ad.especialidades,
+            ad.registro_profissional, ad.anos_experiencia, ad.curriculo_link,
+            ad.aceita_atendimento_online, ad.aceita_atendimento_presencial,
+            ad.duracao_padrao_atendimento_min,
+            (SELECT ROUND(AVG(aval.nota), 1) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS media_avaliacoes,
+            (SELECT COUNT(aval.id_avaliacao) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS total_avaliacoes,
+            u.data_criacao AS data_criacao_usuario, u.situacao AS situacao_usuario
+
+        FROM usuario u
+        JOIN atendente_detalhes ad ON u.id_usuario = ad.id_usuario
+        WHERE u.tipo_usuario = 'ATENDENTE'
+     AND u.situacao = %s ORDER BY media_avaliacoes DESC, u.nome_completo ASC
+14/10/2025 17:48:33 [DEBUG] db:34 - Parâmetros: ('ATIVO',)
+14/10/2025 17:48:33 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:48:33 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:48:33 [DEBUG] db:41 - Query retornou 3 registros
+14/10/2025 17:48:33 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:48:34 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+14/10/2025 17:48:34 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+14/10/2025 17:48:34 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+14/10/2025 17:48:36 [DEBUG] db:32 - Executando query: 
+        SELECT
+            u.id_usuario, u.nome_completo, u.nome_social, u.email, u.identidade_genero,
+            ad.area_atuacao, ad.qualificacao_descricao, ad.especialidades,
+            ad.registro_profissional, ad.anos_experiencia, ad.curriculo_link,
+            ad.aceita_atendimento_online, ad.aceita_atendimento_presencial,
+            ad.duracao_padrao_atendimento_min,
+            (SELECT ROUND(AVG(aval.nota), 1) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS media_avaliacoes,
+            (SELECT COUNT(aval.id_avaliacao) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS total_avaliacoes,
+            u.data_criacao AS data_criacao_usuario, u.situacao AS situacao_usuario
+
+        FROM usuario u
+        JOIN atendente_detalhes ad ON u.id_usuario = ad.id_usuario
+        WHERE u.tipo_usuario = 'ATENDENTE'
+     AND u.situacao = %s ORDER BY media_avaliacoes DESC, u.nome_completo ASC
+14/10/2025 17:48:36 [DEBUG] db:34 - Parâmetros: ('ATIVO',)
+14/10/2025 17:48:36 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:48:36 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:48:36 [DEBUG] db:41 - Query retornou 3 registros
+14/10/2025 17:48:36 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:49:03 [DEBUG] validators:11 - Validando email: filipe.mitre21@gmail.com
+14/10/2025 17:49:03 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:49:03 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:49:03 [DEBUG] auth:27 - Verificando senha
+14/10/2025 17:49:03 [DEBUG] auth:30 - Verificação de senha concluída
+14/10/2025 17:49:03 [DEBUG] auth:38 - Gerando token JWT para usuário 1 do tipo ADMIN
+14/10/2025 17:49:03 [INFO] auth:46 - Token JWT gerado com sucesso para usuário 1
+14/10/2025 17:49:04 [DEBUG] db:32 - Executando query: 
+        SELECT
+            u.id_usuario, u.nome_completo, u.nome_social, u.email, u.identidade_genero,
+            ad.area_atuacao, ad.qualificacao_descricao, ad.especialidades,
+            ad.registro_profissional, ad.anos_experiencia, ad.curriculo_link,
+            ad.aceita_atendimento_online, ad.aceita_atendimento_presencial,
+            ad.duracao_padrao_atendimento_min,
+            (SELECT ROUND(AVG(aval.nota), 1) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS media_avaliacoes,
+            (SELECT COUNT(aval.id_avaliacao) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS total_avaliacoes,
+            u.data_criacao AS data_criacao_usuario, u.situacao AS situacao_usuario
+
+        FROM usuario u
+        JOIN atendente_detalhes ad ON u.id_usuario = ad.id_usuario
+        WHERE u.tipo_usuario = 'ATENDENTE'
+     ORDER BY media_avaliacoes DESC, u.nome_completo ASC
+14/10/2025 17:49:04 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:49:04 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:49:04 [DEBUG] db:41 - Query retornou 3 registros
+14/10/2025 17:49:04 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:50:09 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+14/10/2025 17:50:09 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+14/10/2025 17:50:09 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+14/10/2025 17:50:17 [DEBUG] validators:11 - Validando email: daniel@gmail.com
+14/10/2025 17:50:17 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:50:17 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:50:17 [DEBUG] auth:27 - Verificando senha
+14/10/2025 17:50:17 [DEBUG] auth:30 - Verificação de senha concluída
+14/10/2025 17:50:17 [DEBUG] auth:38 - Gerando token JWT para usuário 2 do tipo CLIENTE
+14/10/2025 17:50:17 [INFO] auth:46 - Token JWT gerado com sucesso para usuário 2
+14/10/2025 17:50:18 [DEBUG] auth:73 - Verificando token de autenticação
+14/10/2025 17:50:18 [DEBUG] auth:54 - Tentando decodificar token JWT
+14/10/2025 17:50:18 [DEBUG] auth:57 - Token JWT decodificado com sucesso para usuário 2
+14/10/2025 17:50:18 [DEBUG] auth:89 - Buscando dados do usuário 2
+14/10/2025 17:50:18 [DEBUG] db:32 - Executando query: SELECT id_usuario, nome_completo, email, tipo_usuario, situacao FROM usuario WHERE id_usuario = %s
+14/10/2025 17:50:18 [DEBUG] db:34 - Parâmetros: (2,)
+14/10/2025 17:50:18 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:50:18 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:50:18 [DEBUG] db:44 - Query retornou um registro
+14/10/2025 17:50:18 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:50:18 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+14/10/2025 17:50:18 [DEBUG] db:32 - Executando query: 
+        SELECT
+            ag.id_agendamento, ag.data_hora_inicio, ag.duracao_minutos, ag.modalidade, ag.status_agendamento,
+            ag.assunto_solicitacao, ag.link_atendimento_online, ag.observacoes_atendente,
+            cli.nome_completo AS nome_cliente, cli.id_usuario AS id_cliente,
+            att.nome_completo AS nome_atendente, att.id_usuario AS id_atendente,
+            ad.area_atuacao AS area_atendente,
+            (SELECT COUNT(*) FROM avaliacao av WHERE av.id_agendamento = ag.id_agendamento) > 0 AS avaliacao_existente
+        FROM agendamento ag
+        JOIN usuario cli ON ag.id_cliente = cli.id_usuario
+        JOIN usuario att ON ag.id_atendente = att.id_usuario
+        JOIN atendente_detalhes ad ON att.id_usuario = ad.id_usuario
+        WHERE
+     ag.id_cliente = %s ORDER BY ag.data_hora_inicio DESC
+14/10/2025 17:50:18 [DEBUG] db:34 - Parâmetros: (2,)
+14/10/2025 17:50:18 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:50:18 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:50:18 [DEBUG] db:41 - Query retornou 2 registros
+14/10/2025 17:50:18 [DEBUG] db:52 - Conexão com o banco de dados fechada
+14/10/2025 17:53:56 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+14/10/2025 17:53:56 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+14/10/2025 17:53:56 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+14/10/2025 17:53:59 [DEBUG] db:32 - Executando query: 
+        SELECT
+            u.id_usuario, u.nome_completo, u.nome_social, u.email, u.identidade_genero,
+            ad.area_atuacao, ad.qualificacao_descricao, ad.especialidades,
+            ad.registro_profissional, ad.anos_experiencia, ad.curriculo_link,
+            ad.aceita_atendimento_online, ad.aceita_atendimento_presencial,
+            ad.duracao_padrao_atendimento_min,
+            (SELECT ROUND(AVG(aval.nota), 1) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS media_avaliacoes,
+            (SELECT COUNT(aval.id_avaliacao) FROM avaliacao aval
+             JOIN agendamento ag_aval ON aval.id_agendamento = ag_aval.id_agendamento
+             WHERE ag_aval.id_atendente = u.id_usuario AND ag_aval.status_agendamento = 'REALIZADO') AS total_avaliacoes,
+            u.data_criacao AS data_criacao_usuario, u.situacao AS situacao_usuario
+
+        FROM usuario u
+        JOIN atendente_detalhes ad ON u.id_usuario = ad.id_usuario
+        WHERE u.tipo_usuario = 'ATENDENTE'
+     AND u.situacao = %s ORDER BY media_avaliacoes DESC, u.nome_completo ASC
+14/10/2025 17:53:59 [DEBUG] db:34 - Parâmetros: ('ATIVO',)
+14/10/2025 17:53:59 [DEBUG] db:11 - Tentando estabelecer conexão com o banco de dados
+14/10/2025 17:53:59 [INFO] db:22 - Conexão com o banco de dados estabelecida com sucesso
+14/10/2025 17:53:59 [DEBUG] db:41 - Query retornou 3 registros
+14/10/2025 17:53:59 [DEBUG] db:52 - Conexão com o banco de dados fechada
+31/10/2025 22:00:06 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:06 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:06 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:06 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:06 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:06 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:06 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:06 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:06 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:06 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:06 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:06 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:06 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:06 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:06 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:06 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:06 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:06 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:06 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:06 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:38 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:38 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:38 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:38 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:38 [INFO] app:80 - Iniciando servidor Flask...
+31/10/2025 22:00:39 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:39 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:39 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:39 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:39 [INFO] app:80 - Iniciando servidor Flask...
+31/10/2025 22:00:46 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:46 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:46 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:46 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:46 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:46 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:46 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:46 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:46 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:46 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:46 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:46 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:46 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:46 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:46 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:46 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:00:46 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:00:46 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:00:46 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:00:46 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:08:26 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:08:26 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:08:26 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:08:26 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:08:26 [INFO] app:80 - Iniciando servidor Flask...
+31/10/2025 22:08:44 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:08:44 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:08:44 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:08:44 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:08:44 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:08:44 [DEBUG] auth:54 - Tentando decodificar token JWT
+31/10/2025 22:08:44 [WARNING] auth:63 - Token JWT inválido: Not enough segments
+31/10/2025 22:08:44 [WARNING] auth:86 - Tentativa de acesso com token inválido ou expirado
+31/10/2025 22:08:44 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:08:44 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:08:44 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:08:44 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:08:44 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:08:44 [DEBUG] auth:54 - Tentando decodificar token JWT
+31/10/2025 22:08:44 [WARNING] auth:63 - Token JWT inválido: Not enough segments
+31/10/2025 22:08:44 [WARNING] auth:86 - Tentativa de acesso com token inválido ou expirado
+31/10/2025 22:08:44 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:08:44 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:08:44 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:08:44 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:08:44 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:08:44 [DEBUG] auth:54 - Tentando decodificar token JWT
+31/10/2025 22:08:44 [WARNING] auth:63 - Token JWT inválido: Not enough segments
+31/10/2025 22:08:44 [WARNING] auth:86 - Tentativa de acesso com token inválido ou expirado
+31/10/2025 22:08:44 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:08:44 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:08:45 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:08:45 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:08:45 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:08:45 [DEBUG] auth:54 - Tentando decodificar token JWT
+31/10/2025 22:08:45 [WARNING] auth:63 - Token JWT inválido: Not enough segments
+31/10/2025 22:08:45 [WARNING] auth:86 - Tentativa de acesso com token inválido ou expirado
+31/10/2025 22:08:45 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:08:45 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:08:45 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:08:45 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:08:45 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:08:45 [DEBUG] auth:54 - Tentando decodificar token JWT
+31/10/2025 22:08:45 [WARNING] auth:63 - Token JWT inválido: Not enough segments
+31/10/2025 22:08:45 [WARNING] auth:86 - Tentativa de acesso com token inválido ou expirado
+31/10/2025 22:11:02 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:11:02 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:11:02 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:11:02 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:11:02 [INFO] app:80 - Iniciando servidor Flask...
+31/10/2025 22:11:21 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:11:21 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:11:21 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:11:21 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:11:21 [DEBUG] auth:89 - Buscando dados do usuário 1
+31/10/2025 22:11:21 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:150 - Verificando permissão de cliente
+31/10/2025 22:11:21 [DEBUG] auth:157 - Cliente 1 autorizado
+31/10/2025 22:11:21 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:11:21 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:11:21 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:11:21 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:11:21 [DEBUG] auth:89 - Buscando dados do usuário 2
+31/10/2025 22:11:21 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:133 - Verificando permissão de atendente
+31/10/2025 22:11:21 [DEBUG] auth:142 - Atendente 2 autorizado
+31/10/2025 22:11:21 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:11:21 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:11:21 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:11:21 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:11:21 [DEBUG] auth:89 - Buscando dados do usuário 2
+31/10/2025 22:11:21 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:133 - Verificando permissão de atendente
+31/10/2025 22:11:21 [DEBUG] auth:142 - Atendente 2 autorizado
+31/10/2025 22:11:21 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:11:21 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:11:21 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:11:21 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:11:21 [DEBUG] auth:89 - Buscando dados do usuário 1
+31/10/2025 22:11:21 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:150 - Verificando permissão de cliente
+31/10/2025 22:11:21 [DEBUG] auth:157 - Cliente 1 autorizado
+31/10/2025 22:11:21 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:11:21 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:11:21 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:11:21 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:11:21 [DEBUG] auth:73 - Verificando token de autenticação
+31/10/2025 22:11:21 [DEBUG] auth:89 - Buscando dados do usuário 1
+31/10/2025 22:11:21 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+31/10/2025 22:38:45 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 22:38:45 [INFO] app:22 - Registrando blueprints...
+31/10/2025 22:38:45 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 22:38:45 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 22:38:45 [INFO] app:80 - Iniciando servidor Flask...
+31/10/2025 23:08:42 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 23:08:42 [INFO] app:22 - Registrando blueprints...
+31/10/2025 23:08:42 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 23:08:42 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 23:08:42 [INFO] app:80 - Iniciando servidor Flask...
+31/10/2025 23:39:45 [INFO] app:17 - Iniciando criação da aplicação Flask...
+31/10/2025 23:39:45 [INFO] app:22 - Registrando blueprints...
+31/10/2025 23:39:46 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+31/10/2025 23:39:46 [INFO] app:75 - Aplicação Flask criada com sucesso
+31/10/2025 23:39:46 [INFO] app:80 - Iniciando servidor Flask...

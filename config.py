@@ -12,7 +12,7 @@ class Config:
 
     DB_HOST = os.environ.get('DB_HOST') or 'localhost'
     DB_USER = os.environ.get('DB_USER') or 'root'
-    DB_PASSWORD = os.environ.get('DB_PASSWORD') or '' # Necessário colocar sua senha correspondente do Banco de dados se tiver
+    DB_PASSWORD = os.environ.get('DB_PASSWORD') or 'learnpro' # Necessário colocar sua senha correspondente do Banco de dados se tiver
     DB_NAME = os.environ.get('DB_NAME') or 'site_agendamento'
     
 

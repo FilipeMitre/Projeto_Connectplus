@@ -1,0 +1,174 @@
+DOCUMENTAÇÃO BDD GHERKIN - TESTES UNITÁRIOS
+Projeto: Projeto_Connectplus
+Arquivo de testes: tests/test_agendamentos.py
+Data: 2025-11-24
+
+================================================================================
+TESTE 1: Criar agendamento como cliente com sucesso
+================================================================================
+
+Funcionalidade: Criação de agendamento
+  Como um cliente autenticado
+  Quero criar um novo agendamento com um atendente
+  Para que eu possa agendar um atendimento
+
+  Cenário: Um cliente registrado cria um agendamento com dados válidos
+    Dado que um cliente está autenticado no sistema com email "cliente@teste.com" e tipo de usuário "CLIENTE"
+    E o cliente tem situação "ATIVO" no banco de dados
+    E existe um atendente com id "2" no sistema
+    E o horário solicitado está disponível para o atendente
+    Quando o cliente envia uma requisição POST para "/api/agendamentos" com os seguintes dados:
+      | Campo                  | Valor                           |
+      | id_atendente           | 2                               |
+      | data_hora_inicio       | 2025-11-25 14:00:00             |
+      | duracao_minutos        | 60                              |
+      | assunto_solicitacao    | Consulta de rotina              |
+      | modalidade             | ONLINE                          |
+    E os dados passam na validação
+    Então a resposta deve ter o status "201 Created"
+    E a resposta deve conter a chave "agendamento_criado"
+    E o campo "id_agendamento" deve ser "1"
+    E o campo "status_agendamento" deve ser "SOLICITADO"
+    E o campo "modalidade" deve ser "ONLINE"
+    E um novo registro de agendamento deve ser criado no banco de dados
+
+================================================================================
+TESTE 2: Confirmar agendamento como atendente
+================================================================================
+
+Funcionalidade: Confirmação de agendamento pelo atendente
+  Como um atendente autenticado
+  Quero confirmar um agendamento solicitado
+  Para que eu possa formalizar o atendimento
+
+  Cenário: Um atendente registrado confirma um agendamento solicitado
+    Dado que um atendente está autenticado no sistema com email "atendente@teste.com" e tipo de usuário "ATENDENTE"
+    E o atendente tem situação "ATIVO" no banco de dados
+    E existe um agendamento com id "1" no sistema
+    E o agendamento está com o status "SOLICITADO"
+    E o agendamento pertence ao atendente logado (id_atendente = 2)
+    Quando o atendente envia uma requisição POST para "/api/agendamentos/1/confirmar/atendente" com os seguintes dados:
+      | Campo                      | Valor                                      |
+      | link_atendimento_online    | https://meet.google.com/abc-defg-hij      |
+      | observacoes_atendente      | Preparar documentos                         |
+    Então a resposta deve ter o status "200 OK"
+    E a resposta deve conter uma mensagem de confirmação
+    E o campo "status_agendamento" deve ser atualizado para "CONFIRMADO" no banco de dados
+    E o banco de dados deve registrar o "link_atendimento_online" fornecido
+    E o cliente associado ao agendamento deve ser notificado
+
+================================================================================
+TESTE 3: Recusar agendamento sem motivo (validação negativa)
+================================================================================
+
+Funcionalidade: Validação de campos obrigatórios na recusa de agendamento
+  Como um atendente autenticado
+  Quero garantir que a recusa de um agendamento tenha um motivo
+  Para que o cliente receba feedback adequado
+
+  Cenário: Um atendente tenta recusar um agendamento sem fornecer motivo
+    Dado que um atendente está autenticado no sistema com email "atendente@teste.com" e tipo de usuário "ATENDENTE"
+    E o atendente tem situação "ATIVO" no banco de dados
+    E existe um agendamento com id "1" no sistema
+    Quando o atendente envia uma requisição POST para "/api/agendamentos/1/recusar/atendente" sem fornecer um motivo
+    E o payload está vazio ou não contém o campo "motivo"
+    Então a resposta deve ter o status "400 Bad Request"
+    E a resposta deve conter uma mensagem de erro indicando que o campo "motivo" é obrigatório
+    E o status do agendamento no banco de dados não deve ser alterado
+    E nenhuma notificação deve ser enviada ao cliente
+
+================================================================================
+TESTE 4: Cancelar agendamento como cliente
+================================================================================
+
+Funcionalidade: Cancelamento de agendamento pelo cliente
+  Como um cliente autenticado
+  Quero cancelar um agendamento confirmado
+  Para que eu possa liberar o horário do atendente
+
+  Cenário: Um cliente registrado cancela um agendamento confirmado
+    Dado que um cliente está autenticado no sistema com email "cliente@teste.com" e tipo de usuário "CLIENTE"
+    E o cliente tem situação "ATIVO" no banco de dados
+    E existe um agendamento com id "1" no sistema
+    E o agendamento está com o status "CONFIRMADO"
+    E o agendamento pertence ao cliente logado (id_cliente = 1)
+    Quando o cliente envia uma requisição POST para "/api/agendamentos/1/cancelar/cliente"
+    Então a resposta deve ter o status "200 OK"
+    E a resposta deve conter uma mensagem de cancelamento
+    E o campo "status_agendamento" deve ser atualizado para "CANCELADO_CLIENTE" no banco de dados
+    E a data/hora de cancelamento deve ser registrada no banco de dados
+    E o atendente associado ao agendamento deve ser notificado do cancelamento
+
+================================================================================
+TESTE 5: Listar agendamentos com filtro de status
+================================================================================
+
+Funcionalidade: Listagem de agendamentos com filtros
+  Como um cliente autenticado
+  Quero listar meus agendamentos filtrados por status
+  Para que eu possa visualizar apenas os agendamentos que me interessam
+
+  Cenário: Um cliente lista seus agendamentos com filtro de status confirmado
+    Dado que um cliente está autenticado no sistema com email "cliente@teste.com" e tipo de usuário "CLIENTE"
+    E o cliente tem situação "ATIVO" no banco de dados
+    E o cliente possui os seguintes agendamentos no banco de dados:
+      | id | status_agendamento | data_hora_inicio      | modalidade | atendente_nome     |
+      | 1  | CONFIRMADO         | 2025-11-25 14:00:00   | ONLINE     | Atendente Teste    |
+      | 2  | CONFIRMADO         | 2025-11-20 10:00:00   | PRESENCIAL | Atendente Teste    |
+    Quando o cliente envia uma requisição GET para "/api/agendamentos?status=CONFIRMADO"
+    Então a resposta deve ter o status "200 OK"
+    E a resposta deve conter a chave "agendamentos_futuros"
+    E a resposta deve conter a chave "agendamentos_passados"
+    E o campo "agendamentos_futuros" deve conter 1 agendamento
+      | Campo                | Valor                  |
+      | id_agendamento       | 1                      |
+      | status_agendamento   | CONFIRMADO             |
+      | data_hora_inicio     | 2025-11-25 14:00:00    |
+      | modalidade           | ONLINE                 |
+    E o campo "agendamentos_passados" deve conter 1 agendamento
+      | Campo                | Valor                  |
+      | id_agendamento       | 2                      |
+      | status_agendamento   | CONFIRMADO             |
+      | data_hora_inicio     | 2025-11-20 10:00:00    |
+      | modalidade           | PRESENCIAL             |
+    E todos os agendamentos retornados devem ter o status "CONFIRMADO"
+    E os agendamentos devem estar ordenados corretamente (futuros antes de passados)
+
+================================================================================
+RESUMO DOS CENÁRIOS
+================================================================================
+
+Total de cenários de teste: 5
+
+Cenários Positivos (Happy Path):
+  1. Criar agendamento como cliente com sucesso
+  2. Confirmar agendamento como atendente
+  3. Cancelar agendamento como cliente
+  4. Listar agendamentos com filtro de status
+
+Cenários Negativos (Error Cases):
+  1. Recusar agendamento sem motivo (validação)
+
+================================================================================
+NOTAS ADICIONAIS
+================================================================================
+
+Padrão BDD utilizado: Gherkin (Given-When-Then)
+  - Dado (Given): estado inicial do sistema e pré-condições
+  - Quando (When): ação realizada pelo usuário
+  - Então (Then): resultado esperado após a ação
+
+Cobertura de testes:
+  - 80% cenários positivos
+  - 20% cenários negativos/validação
+
+Dependências mockadas em todos os testes:
+  - utils.auth.decode_token (autenticação JWT)
+  - utils.auth.execute_query (consultas auxiliares ao banco)
+  - routes.agendamentos.get_connection (conexão com banco de dados)
+  - routes.agendamentos.validate_agendamento_data (validação de dados)
+
+Ferramenta de teste: pytest
+Método de execução: pytest tests/test_agendamentos.py -v -s
+
+Fim do documento.

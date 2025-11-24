@@ -1,0 +1,91 @@
+Explicação detalhada da lógica dos testes unitários
+Projeto: Projeto_Connectplus
+Arquivo de testes: tests/test_agendamentos.py
+
+Objetivo geral
+- Validar, de forma isolada, a lógica das rotas de agendamento do backend.
+- Garantir comportamento esperado em cenários positivos e negativos.
+- Isolar dependências externas (banco de dados e autenticação) com mocks.
+
+Estrutura geral dos testes
+- Framework: pytest.
+- Fixtures:
+  - `app()`: cria a aplicação Flask em modo de teste chamando `create_app()` e ajustando `app.config['TESTING']`.
+  - `client(app)`: retorna `app.test_client()` para simular requisições HTTP.
+- Mocks principais:
+  - `unittest.mock.patch` é usado para substituir funções externas:
+    - `utils.auth.decode_token` e `utils.auth.execute_query` (autenticação/consultas auxiliares).
+    - `routes.agendamentos.get_connection` (abertura de conexão com o banco).
+    - `routes.agendamentos.validate_agendamento_data` (validação de payloads de agendamento).
+  - `MagicMock` e `mock_cursor` simulam o comportamento do cursor/connection do banco.
+
+Como os mocks simulam o banco
+- `mock_connection = MagicMock()` e `mock_cursor = MagicMock()` são usados para simular a conexão e o cursor.
+- O cursor é obtido por `mock_connection.cursor.return_value.__enter__.return_value = mock_cursor`, isto é, simulamos o uso do cursor dentro de um `with`.
+- `mock_cursor.fetchone.side_effect` é preenchido com uma lista de dicionários (ou valores) que correspondem às chamadas `fetchone()` feitas pela função testada, em ordem.
+  - Ex.: no teste de criação de agendamento, as várias `fetchone()` retornam:
+    1) verificação de existência do atendente,
+    2) verificação de disponibilidade do horário,
+    3) dados do cliente,
+    4) dados do agendamento recém-criado.
+- Para simular `INSERT` e obter `lastrowid`, o teste atribui `mock_cursor.lastrowid = 1`.
+- Para simular `execute` e checar que o UPDATE foi chamado, verificamos `mock_cursor.execute.call_args_list` filtrando por trechos do SQL esperado.
+
+Descrição de cada teste
+1) test_criar_agendamento_cliente_sucesso
+- Objetivo: garantir que um cliente com dados válidos consegue criar um agendamento.
+- Mocks usados: `decode_token` (retorna user_id tipo CLIENTE), `execute_query` (retorna dados do usuário), `validate_agendamento_data` (retorna lista vazia de erros) e `get_connection` (retorna connection/cursor simulados).
+- Simulação do DB: `mock_cursor.fetchone.side_effect` com respostas que representam checagens internas (atendente existe, horário disponível, dados do cliente, agendamento criado).
+- Verificações finais: código HTTP 201, existência da chave `agendamento_criado`, `id_agendamento == 1`, status 'SOLICITADO'.
+
+2) test_confirmar_agendamento_atendente
+- Objetivo: teste de confirmação de agendamento pelo atendente; deve atualizar status para CONFIRMADO.
+- Mocks: `decode_token` (ATENDENTE), `execute_query` e `get_connection`.
+- Simulação do DB: `fetchone()` retorna o registro do agendamento com status 'SOLICITADO', e depois o nome do atendente.
+- Verificações: status HTTP 200, mensagem de confirmação na resposta, e checagem de chamadas `UPDATE` no `mock_cursor.execute.call_args_list`.
+
+3) test_recusar_agendamento_sem_motivo
+- Objetivo: testar validação negativa — recusa sem motivo deve retornar 400.
+- Mocks: `decode_token` e `execute_query` para autenticação.
+- Sem uso de `get_connection` porque a validação é feita antes de alterações no DB.
+- Verificações: status 400 e mensagem indicando que o 'motivo' é obrigatório.
+
+4) test_cancelar_agendamento_cliente
+- Objetivo: garantir que cliente pode cancelar um agendamento confirmado.
+- Mocks: `decode_token`, `execute_query`, `get_connection`.
+- Simulação do DB: `fetchone()` retornando o agendamento com `status_agendamento: 'CONFIRMADO'`.
+- Verificações: status HTTP 200, mensagem com 'cancelado' e presença de uma chamada SQL que contenha `CANCELADO_CLIENTE` (ou string equivalente) em `mock_cursor.execute.call_args_list`.
+
+5) test_listar_agendamentos_com_filtro
+- Objetivo: testar a rota de listagem aplicando filtro de `status`.
+- Mocks: `decode_token`, `execute_query` (substitui a query que retornaria múltiplos agendamentos do DB).
+- Simulação: um array `agendamentos_mock` com agendamentos futuros e passados, ambos com status 'CONFIRMADO'.
+- Verificações: resposta 200, chaves `agendamentos_futuros` e `agendamentos_passados` presentes, tamanhos esperados (1 futuro, 1 passado) e confirmação de que a query recebeu o filtro `CONFIRMADO`.
+
+Padrões e boas práticas observadas
+- Isolamento: os testes isolam lógica de negócio usando mocks para dependências externas (DB e autenticação).
+- Fixtures reutilizáveis (`app` e `client`) reduzem repetição e mantém o setup centralizado.
+- Uso de `side_effect` no `fetchone` permite simular chamadas sequenciais ao DB em funções que fazem várias consultas.
+- Verificações explícitas das chamadas SQL (`execute`) ajudam a assegurar que a função tentou executar a alteração esperada.
+- Testes cobrem tanto caminhos felizes (positivos) quanto validações/erros (negativos).
+
+Como executar localmente e salvar evidências
+- Rodar todos os testes:
+  pytest -v
+- Rodar apenas o arquivo de testes:
+  pytest tests/test_agendamentos.py -v -s
+- Salvar saída em arquivo (PowerShell):
+  pytest tests/test_agendamentos.py -v -s | Tee-Object -FilePath teste_agendamentos_output.txt
+- Gerar relatório de cobertura (opcional):
+  pytest --cov=. --cov-report=term-missing tests/test_agendamentos.py
+
+Onde inserir as evidências no relatório
+- Salvar `teste_agendamentos_output.txt` e screenshots em `docs/evidencias/`.
+- Incluir no relatório ABNT: figura com legenda "Saída do pytest - tests/test_agendamentos.py" e referência no texto explicando o que cada imagem mostra.
+
+Observações finais e sugestões
+- Cobertura: executar `pytest --cov` para medir cobertura e identificar funções sem testes.
+- Mais casos negativos: testar payloads inválidos em `validate_agendamento_data` e respostas inesperadas do DB.
+- Integração contínua: automatizar `pytest --cov` no pipeline para garantir regressões não sejam introduzidas.
+
+Fim do documento.

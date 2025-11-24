@@ -3,3 +3,589 @@
 01/11/2025 00:09:23 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
 01/11/2025 00:09:23 [INFO] app:75 - Aplicação Flask criada com sucesso
 01/11/2025 00:09:23 [INFO] app:80 - Iniciando servidor Flask...
+22/11/2025 20:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:16:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:16:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:16:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:16:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:16:59 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:16:59 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:16:59 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:16:59 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:16:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:16:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:16:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:16:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:16:59 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:16:59 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:16:59 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:16:59 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:16:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:16:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:16:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:16:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:16:59 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:16:59 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:16:59 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:16:59 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:16:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:16:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:16:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:16:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:16:59 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:16:59 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:16:59 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:16:59 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:16:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:17:00 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:17:00 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:17:00 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:17:00 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:17:00 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:17:34 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:17:34 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:17:34 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:17:34 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:17:34 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:17:34 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:17:34 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:17:34 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:17:34 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:17:34 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:17:34 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:17:34 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:17:34 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:17:34 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:17:34 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:17:34 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:17:34 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:17:34 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:17:34 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:17:34 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:17:35 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:17:35 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:17:35 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:17:35 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:17:35 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:17:35 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:17:35 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:17:35 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:17:35 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:17:35 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:17:35 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:17:35 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:17:35 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:17:35 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:17:35 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:17:35 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:17:35 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:17:35 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:17:35 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:17:35 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:17:35 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:17:35 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:17:35 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:18:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:18:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:18:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:18:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:18:08 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:18:08 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:18:08 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:18:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:18:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:18:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:18:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:18:08 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:18:08 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:18:08 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:18:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:18:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:18:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:18:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:18:08 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:18:08 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:18:08 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:18:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:18:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:18:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:18:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:18:08 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:18:08 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:18:08 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:18:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:18:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:18:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:18:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:18:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:18:08 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:18:08 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:19:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:19:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:19:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:19:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:19:59 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:19:59 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:19:59 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:19:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:19:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:19:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:19:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:19:59 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:19:59 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:19:59 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:19:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:19:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:19:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:19:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:19:59 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:19:59 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:19:59 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:19:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:19:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:19:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:19:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:19:59 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:19:59 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:19:59 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:19:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:19:59 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:19:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:19:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:19:59 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:19:59 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:19:59 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:20:20 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:20 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:20 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:20 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:20 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:20:20 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:20:20 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:20:20 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:20 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:20 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:20 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:20 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:20:20 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:20:20 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:20:20 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:20 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:20 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:20 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:20 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:20:20 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:20:20 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:20:20 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:20 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:20 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:20 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:20 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:20:20 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:20:20 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:20:20 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:20 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:20 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:20 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:20 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:20 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:20:20 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:20:42 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:42 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:42 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:42 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:42 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:42 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:20:42 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:20:42 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:20:42 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:20:42 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:42 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:42 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:42 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:42 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:42 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:20:42 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:20:42 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:20:42 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:20:43 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:43 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:43 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:43 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:43 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:43 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:20:43 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:20:43 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:20:43 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:20:43 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:43 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:43 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:43 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:43 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:43 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:20:43 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:20:43 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:20:43 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:20:43 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:20:43 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:20:43 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:20:43 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:20:43 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:20:43 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:20:43 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:21:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:21:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:21:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:21:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:21:08 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:21:08 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:21:08 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:21:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:21:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:21:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:21:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:21:08 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:21:08 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:21:08 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:21:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:21:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:21:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:21:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:21:08 [DEBUG] auth:89 - Buscando dados do usuário 2
+22/11/2025 20:21:08 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:133 - Verificando permissão de atendente
+22/11/2025 20:21:08 [DEBUG] auth:142 - Atendente 2 autorizado
+22/11/2025 20:21:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:21:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:21:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:21:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:21:08 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:21:08 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:150 - Verificando permissão de cliente
+22/11/2025 20:21:08 [DEBUG] auth:157 - Cliente 1 autorizado
+22/11/2025 20:21:08 [INFO] app:17 - Iniciando criação da aplicação Flask...
+22/11/2025 20:21:08 [INFO] app:22 - Registrando blueprints...
+22/11/2025 20:21:08 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+22/11/2025 20:21:08 [INFO] app:75 - Aplicação Flask criada com sucesso
+22/11/2025 20:21:08 [DEBUG] auth:73 - Verificando token de autenticação
+22/11/2025 20:21:08 [DEBUG] auth:89 - Buscando dados do usuário 1
+22/11/2025 20:21:08 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+23/11/2025 16:00:18 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 16:00:18 [INFO] app:22 - Registrando blueprints...
+23/11/2025 16:00:19 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 16:00:19 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 16:00:19 [DEBUG] auth:73 - Verificando token de autenticação
+23/11/2025 16:00:19 [DEBUG] auth:89 - Buscando dados do usuário 1
+23/11/2025 16:00:19 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+23/11/2025 16:00:19 [DEBUG] auth:150 - Verificando permissão de cliente
+23/11/2025 16:00:19 [DEBUG] auth:157 - Cliente 1 autorizado
+23/11/2025 16:00:20 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 16:00:20 [INFO] app:22 - Registrando blueprints...
+23/11/2025 16:00:20 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 16:00:21 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 16:00:21 [DEBUG] auth:73 - Verificando token de autenticação
+23/11/2025 16:00:21 [DEBUG] auth:89 - Buscando dados do usuário 2
+23/11/2025 16:00:21 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+23/11/2025 16:00:21 [DEBUG] auth:133 - Verificando permissão de atendente
+23/11/2025 16:00:21 [DEBUG] auth:142 - Atendente 2 autorizado
+23/11/2025 16:00:21 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 16:00:21 [INFO] app:22 - Registrando blueprints...
+23/11/2025 16:00:21 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 16:00:21 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 16:00:21 [DEBUG] auth:73 - Verificando token de autenticação
+23/11/2025 16:00:21 [DEBUG] auth:89 - Buscando dados do usuário 2
+23/11/2025 16:00:21 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+23/11/2025 16:00:21 [DEBUG] auth:133 - Verificando permissão de atendente
+23/11/2025 16:00:21 [DEBUG] auth:142 - Atendente 2 autorizado
+23/11/2025 16:00:21 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 16:00:21 [INFO] app:22 - Registrando blueprints...
+23/11/2025 16:00:22 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 16:00:22 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 16:00:22 [DEBUG] auth:73 - Verificando token de autenticação
+23/11/2025 16:00:22 [DEBUG] auth:89 - Buscando dados do usuário 1
+23/11/2025 16:00:22 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+23/11/2025 16:00:22 [DEBUG] auth:150 - Verificando permissão de cliente
+23/11/2025 16:00:22 [DEBUG] auth:157 - Cliente 1 autorizado
+23/11/2025 16:00:22 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 16:00:22 [INFO] app:22 - Registrando blueprints...
+23/11/2025 16:00:23 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 16:00:23 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 16:00:23 [DEBUG] auth:73 - Verificando token de autenticação
+23/11/2025 16:00:23 [DEBUG] auth:89 - Buscando dados do usuário 1
+23/11/2025 16:00:23 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+23/11/2025 16:15:18 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 16:15:18 [INFO] app:22 - Registrando blueprints...
+23/11/2025 16:15:18 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 16:15:18 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 16:15:18 [INFO] app:80 - Iniciando servidor Flask...
+23/11/2025 16:15:18 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 16:15:18 [INFO] app:22 - Registrando blueprints...
+23/11/2025 16:15:18 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 16:15:18 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 16:15:18 [INFO] app:80 - Iniciando servidor Flask...
+23/11/2025 16:15:30 [DEBUG] app:32 - Acessando rota raiz /
+23/11/2025 16:15:31 [DEBUG] app:38 - Tentando servir arquivo: css/styles.css
+23/11/2025 16:15:31 [INFO] app:49 - Servindo arquivo estático: css/styles.css
+23/11/2025 16:15:31 [DEBUG] app:38 - Tentando servir arquivo: Slogan_atendimento.png
+23/11/2025 16:15:31 [DEBUG] app:38 - Tentando servir arquivo: calendario.png
+23/11/2025 16:15:31 [INFO] app:49 - Servindo arquivo estático: Slogan_atendimento.png
+23/11/2025 16:15:31 [INFO] app:49 - Servindo arquivo estático: calendario.png
+23/11/2025 16:15:31 [DEBUG] app:38 - Tentando servir arquivo: js/script.js
+23/11/2025 16:15:31 [INFO] app:49 - Servindo arquivo estático: js/script.js
+23/11/2025 16:15:32 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+23/11/2025 16:15:32 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+23/11/2025 16:15:32 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+23/11/2025 16:15:32 [DEBUG] app:38 - Tentando servir arquivo: logo_atendimento.png
+23/11/2025 16:15:32 [INFO] app:49 - Servindo arquivo estático: logo_atendimento.png
+23/11/2025 17:02:51 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 17:02:51 [INFO] app:22 - Registrando blueprints...
+23/11/2025 17:02:51 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 17:02:51 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 17:02:51 [INFO] app:80 - Iniciando servidor Flask...
+23/11/2025 17:32:52 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 17:32:52 [INFO] app:22 - Registrando blueprints...
+23/11/2025 17:32:52 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 17:32:52 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 17:32:52 [INFO] app:80 - Iniciando servidor Flask...
+23/11/2025 18:32:48 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 18:32:48 [INFO] app:22 - Registrando blueprints...
+23/11/2025 18:32:48 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 18:32:48 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 18:32:48 [INFO] app:80 - Iniciando servidor Flask...
+23/11/2025 19:02:48 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 19:02:48 [INFO] app:22 - Registrando blueprints...
+23/11/2025 19:02:48 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 19:02:48 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 19:02:48 [INFO] app:80 - Iniciando servidor Flask...
+23/11/2025 19:32:52 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 19:32:52 [INFO] app:22 - Registrando blueprints...
+23/11/2025 19:32:53 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 19:32:53 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 19:32:53 [INFO] app:80 - Iniciando servidor Flask...
+23/11/2025 20:32:48 [INFO] app:17 - Iniciando criação da aplicação Flask...
+23/11/2025 20:32:48 [INFO] app:22 - Registrando blueprints...
+23/11/2025 20:32:48 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+23/11/2025 20:32:48 [INFO] app:75 - Aplicação Flask criada com sucesso
+23/11/2025 20:32:48 [INFO] app:80 - Iniciando servidor Flask...
+23/11/2025 20:39:52 [DEBUG] app:32 - Acessando rota raiz /
+23/11/2025 20:39:53 [DEBUG] app:38 - Tentando servir arquivo: css/styles.css
+23/11/2025 20:39:53 [INFO] app:49 - Servindo arquivo estático: css/styles.css
+23/11/2025 20:39:53 [DEBUG] app:38 - Tentando servir arquivo: Slogan_atendimento.png
+23/11/2025 20:39:53 [INFO] app:49 - Servindo arquivo estático: Slogan_atendimento.png
+23/11/2025 20:39:53 [DEBUG] app:38 - Tentando servir arquivo: calendario.png
+23/11/2025 20:39:53 [INFO] app:49 - Servindo arquivo estático: calendario.png
+23/11/2025 20:39:53 [DEBUG] app:38 - Tentando servir arquivo: js/script.js
+23/11/2025 20:39:53 [INFO] app:49 - Servindo arquivo estático: js/script.js
+23/11/2025 20:39:53 [DEBUG] app:38 - Tentando servir arquivo: api/atendentes/destaque
+23/11/2025 20:39:53 [WARNING] app:63 - Arquivo não encontrado: api/atendentes/destaque
+23/11/2025 20:39:53 [WARNING] app:69 - Endpoint da API não encontrado: /api/atendentes/destaque
+23/11/2025 20:39:54 [DEBUG] app:38 - Tentando servir arquivo: logo_atendimento.png
+23/11/2025 20:39:54 [INFO] app:49 - Servindo arquivo estático: logo_atendimento.png
+24/11/2025 10:10:05 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:05 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:05 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:05 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:05 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:10:05 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:150 - Verificando permissão de cliente
+24/11/2025 10:10:05 [DEBUG] auth:157 - Cliente 1 autorizado
+24/11/2025 10:10:05 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:05 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:05 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:05 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:05 [DEBUG] auth:89 - Buscando dados do usuário 2
+24/11/2025 10:10:05 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:133 - Verificando permissão de atendente
+24/11/2025 10:10:05 [DEBUG] auth:142 - Atendente 2 autorizado
+24/11/2025 10:10:05 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:05 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:05 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:05 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:05 [DEBUG] auth:89 - Buscando dados do usuário 2
+24/11/2025 10:10:05 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:133 - Verificando permissão de atendente
+24/11/2025 10:10:05 [DEBUG] auth:142 - Atendente 2 autorizado
+24/11/2025 10:10:05 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:05 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:05 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:05 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:05 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:10:05 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:150 - Verificando permissão de cliente
+24/11/2025 10:10:05 [DEBUG] auth:157 - Cliente 1 autorizado
+24/11/2025 10:10:05 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:05 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:05 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:05 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:05 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:05 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:10:05 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:10:38 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:38 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:38 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:38 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:38 [INFO] app:80 - Iniciando servidor Flask...
+24/11/2025 10:10:39 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:39 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:39 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:39 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:39 [INFO] app:80 - Iniciando servidor Flask...
+24/11/2025 10:10:49 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:49 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:49 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:49 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:49 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:49 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:10:49 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:10:49 [DEBUG] auth:150 - Verificando permissão de cliente
+24/11/2025 10:10:49 [DEBUG] auth:157 - Cliente 1 autorizado
+24/11/2025 10:10:49 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:49 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:49 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:49 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:49 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:49 [DEBUG] auth:89 - Buscando dados do usuário 2
+24/11/2025 10:10:49 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+24/11/2025 10:10:49 [DEBUG] auth:133 - Verificando permissão de atendente
+24/11/2025 10:10:49 [DEBUG] auth:142 - Atendente 2 autorizado
+24/11/2025 10:10:49 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:49 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:49 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:49 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:49 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:49 [DEBUG] auth:89 - Buscando dados do usuário 2
+24/11/2025 10:10:49 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+24/11/2025 10:10:49 [DEBUG] auth:133 - Verificando permissão de atendente
+24/11/2025 10:10:49 [DEBUG] auth:142 - Atendente 2 autorizado
+24/11/2025 10:10:49 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:49 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:49 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:49 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:49 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:49 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:10:49 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:10:49 [DEBUG] auth:150 - Verificando permissão de cliente
+24/11/2025 10:10:49 [DEBUG] auth:157 - Cliente 1 autorizado
+24/11/2025 10:10:49 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:10:49 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:10:50 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:10:50 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:10:50 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:10:50 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:10:50 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:12:29 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:12:29 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:12:29 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:12:29 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:12:29 [INFO] app:80 - Iniciando servidor Flask...
+24/11/2025 10:12:42 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:12:42 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:12:42 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:12:42 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:12:42 [INFO] app:80 - Iniciando servidor Flask...
+24/11/2025 10:12:55 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:12:55 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:12:55 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:12:55 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:12:55 [INFO] app:80 - Iniciando servidor Flask...
+24/11/2025 10:13:06 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:13:06 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:13:06 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:13:06 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:13:06 [INFO] app:80 - Iniciando servidor Flask...
+24/11/2025 10:13:23 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:13:23 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:13:23 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:13:23 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:13:23 [INFO] app:80 - Iniciando servidor Flask...
+24/11/2025 10:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:16:59 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:16:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:16:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:16:59 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:16:59 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:16:59 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:16:59 [DEBUG] auth:150 - Verificando permissão de cliente
+24/11/2025 10:16:59 [DEBUG] auth:157 - Cliente 1 autorizado
+24/11/2025 10:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:16:59 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:16:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:16:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:16:59 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:16:59 [DEBUG] auth:89 - Buscando dados do usuário 2
+24/11/2025 10:16:59 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+24/11/2025 10:16:59 [DEBUG] auth:133 - Verificando permissão de atendente
+24/11/2025 10:16:59 [DEBUG] auth:142 - Atendente 2 autorizado
+24/11/2025 10:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:16:59 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:16:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:16:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:16:59 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:16:59 [DEBUG] auth:89 - Buscando dados do usuário 2
+24/11/2025 10:16:59 [DEBUG] auth:111 - Usuário 2 autenticado com sucesso
+24/11/2025 10:16:59 [DEBUG] auth:133 - Verificando permissão de atendente
+24/11/2025 10:16:59 [DEBUG] auth:142 - Atendente 2 autorizado
+24/11/2025 10:16:59 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:16:59 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:16:59 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:16:59 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:16:59 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:16:59 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:16:59 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:16:59 [DEBUG] auth:150 - Verificando permissão de cliente
+24/11/2025 10:16:59 [DEBUG] auth:157 - Cliente 1 autorizado
+24/11/2025 10:17:00 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:17:00 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:17:00 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:17:00 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:17:00 [DEBUG] auth:73 - Verificando token de autenticação
+24/11/2025 10:17:00 [DEBUG] auth:89 - Buscando dados do usuário 1
+24/11/2025 10:17:00 [DEBUG] auth:111 - Usuário 1 autenticado com sucesso
+24/11/2025 10:59:50 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 10:59:50 [INFO] app:22 - Registrando blueprints...
+24/11/2025 10:59:50 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 10:59:50 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 10:59:50 [INFO] app:80 - Iniciando servidor Flask...
+24/11/2025 11:29:52 [INFO] app:17 - Iniciando criação da aplicação Flask...
+24/11/2025 11:29:52 [INFO] app:22 - Registrando blueprints...
+24/11/2025 11:29:52 [DEBUG] app:27 - Todos os blueprints foram registrados com sucesso
+24/11/2025 11:29:52 [INFO] app:75 - Aplicação Flask criada com sucesso
+24/11/2025 11:29:52 [INFO] app:80 - Iniciando servidor Flask...
